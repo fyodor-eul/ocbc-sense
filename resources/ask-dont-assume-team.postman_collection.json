@@ -1,0 +1,1741 @@
+{
+  "info": {
+    "name": "Ask, Don't Assume (team)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Every backend route and Socket.IO event, split by who uses it. Each request has saved **examples** (the dropdown at the top right of the response).\n\n1. Start the backend (`docker compose up -d --build`) and load the demo data (`docker compose exec backend node seed.js`).\n2. Check `baseUrl` in the collection's **Variables** tab.\n3. Run **Deva → REST → Start session** first: it saves `{{session_id}}` for the other requests and the Socket.IO payloads."
+  },
+  "item": [
+    {
+      "name": "Deva (frontend)",
+      "description": "The customer app (journey, mode bar, help panel, chat).\n\n**REST** runs in Postman as normal. **Socket.IO** can't be saved in a collection file, so each event is a page of notes: open a Socket.IO request (**New → Socket.IO**, URL `{{baseUrl}}`, **Connect**) and copy the payloads from here.",
+      "item": [
+        {
+          "name": "REST",
+          "description": "The customer app's calls, in journey order. Run them in order: **Start session** saves `{{session_id}}`.",
+          "item": [
+            {
+              "name": "Check eligibility",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/eligibility",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "eligibility"
+                  ]
+                },
+                "description": "Step 1. Nothing is stored. `passport_country`: HK, MY, ID or CN are eligible. If not eligible, show the message for `code` and end the session with outcome `not_eligible`.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"passport_country\": \"HK\",\n  \"is_18_or_older\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "Eligible (Hong Kong, 18+)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/eligibility",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "eligibility"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"passport_country\": \"HK\",\n  \"is_18_or_older\": true\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"eligible\": true\n}"
+                },
+                {
+                  "name": "Country not supported",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/eligibility",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "eligibility"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"passport_country\": \"SG\",\n  \"is_18_or_older\": true\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"eligible\": false,\n  \"code\": \"COUNTRY_NOT_SUPPORTED\"\n}"
+                },
+                {
+                  "name": "Under 18",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/eligibility",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "eligibility"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"passport_country\": \"MY\",\n  \"is_18_or_older\": false\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"eligible\": false,\n  \"code\": \"AGE_REQUIREMENT\"\n}"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Start session",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/sessions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "sessions"
+                  ]
+                },
+                "description": "When the applicant taps **Foreigner with e-passport**. Keep `session_id` in `sessionStorage`; every later call uses it. `preferences` is optional.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"preferences\": {\n    \"wording\": \"standard\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "With preferences",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"preferences\": {\n    \"wording\": \"standard\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"session_id\": \"s1793926166132_1\"\n}"
+                },
+                {
+                  "name": "No preferences",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"session_id\": \"s1793926167347_2\"\n}"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 201\", () => pm.response.to.have.status(201));",
+                      "pm.collectionVariables.set(\"session_id\", pm.response.json().session_id);",
+                      "console.log(\"session_id =\", pm.collectionVariables.get(\"session_id\"));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Change preferences (mode bar)",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "sessions",
+                    "{{session_id}}"
+                  ]
+                },
+                "description": "Send the full current settings whenever one changes. Allowed: `wording` standard / simple, `text_size` default / large / xlarge, `language` en / zh / ms. Also send the matching `event` (e.g. `wording_change:simple`) over Socket.IO.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"current_preferences\": {\n    \"wording\": \"simple\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "Saved",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "{{session_id}}"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"current_preferences\": {\n    \"wording\": \"simple\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "body": ""
+                },
+                {
+                  "name": "Value not allowed",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "{{session_id}}"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"current_preferences\": {\n    \"language\": \"fr\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"error\": \"invalid_data\",\n  \"fields\": [\n    \"current_preferences.language\"\n  ]\n}"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 204\", () => pm.response.to.have.status(204));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Ask the AI",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/explain",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "explain"
+                  ]
+                },
+                "description": "The help panel's question box. The server adds the step and the applicant's settings itself, so send only these three fields. `question`: 1–300 characters.\n\n- `type: ai_answer`: show `answer`.\n- `type: preference_change`: ask *\"Would you like…?\"* and apply `action` / `value` only if they say yes.\n- `fallback: true`: show the standard message and offer **Talk to a person**.\n\nThe **Answer** and **Preference change** examples show what the AI service returns when it's running.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"Why does the chip scan keep failing?\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "Answer",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/explain",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "explain"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"Why does the chip scan keep failing?\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"type\": \"ai_answer\",\n  \"answer\": \"The chip is usually inside the back cover. Take your phone out of its case, place it flat on the back cover and hold still for a few seconds.\",\n  \"fallback\": false,\n  \"action\": null,\n  \"value\": null\n}"
+                },
+                {
+                  "name": "Preference change (ask before applying)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/explain",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "explain"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"Can you make the text bigger?\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"type\": \"preference_change\",\n  \"answer\": \"Would you like me to increase the text size?\",\n  \"fallback\": false,\n  \"action\": \"increase_text_size\",\n  \"value\": \"large\"\n}"
+                },
+                {
+                  "name": "AI unavailable (fallback)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/explain",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "explain"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"Why does the chip scan keep failing?\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"type\": \"ai_answer\",\n  \"answer\": null,\n  \"fallback\": true,\n  \"action\": null,\n  \"value\": null\n}"
+                },
+                {
+                  "name": "Empty question",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/explain",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "explain"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"error\": \"bad_question\"\n}"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Submit application",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/applications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "applications"
+                  ]
+                },
+                "description": "Step 6. Show `reference` on the confirmation screen; it isn't stored.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"session_id\": \"{{session_id}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "Submitted",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/applications",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "applications"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"reference\": \"APP-H61KH6\"\n}"
+                },
+                {
+                  "name": "Already submitted or ended",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/applications",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "applications"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"session_id\": \"{{session_id}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"error\": \"session_not_active\"\n}"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 201\", () => pm.response.to.have.status(201));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "End early",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "sessions",
+                    "{{session_id}}"
+                  ]
+                },
+                "description": "`abandoned` when the applicant leaves, `not_eligible` when step 1 fails. `submitted` is only set by **Submit application**. Run after **Submit application** this returns 204 but changes the outcome, so use a new session if you want to keep it as submitted.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"outcome\": \"abandoned\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "Left (abandoned)",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "{{session_id}}"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"outcome\": \"abandoned\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "body": ""
+                },
+                {
+                  "name": "Outcome not allowed",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "{{session_id}}"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"outcome\": \"submitted\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "{\n  \"error\": \"bad_outcome\"\n}"
+                },
+                {
+                  "name": "Unknown session",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/s0_0",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "s0_0"
+                      ]
+                    },
+                    "description": "",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"outcome\": \"abandoned\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "Not Found"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 204\", () => pm.response.to.have.status(204));"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Socket.IO · send",
+          "description": "Messages the customer app sends. Connect a Socket.IO request to `{{baseUrl}}` first.",
+          "item": [
+            {
+              "name": "send · join_session",
+              "description": "Send on **every** connect, so the app gets this session's chat messages (also after a refresh).\n\n**Send** (event name `join_session`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Joined | `{\"ok\": true}` |\n\n**Then:** if a chat is open, `handoff:history` arrives straight after.",
+              "item": []
+            },
+            {
+              "name": "send · event",
+              "description": "Log one action or signal during the journey. `type` is `category` or `category:value`, e.g. `page_view`, `error:NFC_READ_FAILED`, `friction:repeated_errors`, `wording_change:simple`, `offer_accepted`. Full list in `api-docs.md`.\n\n**Send** (event name `event`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"type\": \"error:NFC_READ_FAILED\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Saved | `{\"ok\": true}` |\n| Server-only type (e.g. `handoff_request`) | `{\"ok\": false, \"error\": \"unknown_type\"}` |\n| Unknown session | `{\"ok\": false, \"error\": \"unknown_session\"}` |\n| Missing `page_id` | `{\"ok\": false, \"error\": \"invalid_event\"}` |\n\n**Then:** consoles get `insights:update`.",
+              "item": []
+            },
+            {
+              "name": "send · handoff:request",
+              "description": "**Talk to a person.** `share` holds only what the share preview showed the applicant; other fields are dropped.\n\n**Send** (event name `handoff:request`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\",\n  \"page_id\": \"account.step3\",\n  \"share\": {\n    \"step_no\": 3,\n    \"step_title\": \"Scan your passport chip\",\n    \"trigger\": \"friction:repeated_errors\",\n    \"last_error\": \"NFC_READ_FAILED\",\n    \"failed_attempts\": 2\n  }\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Request sent (`staff_online: 0` → show \"no staff online right now\") | `{\"ok\": true, \"handoff_no\": 1, \"staff_online\": 1}` |\n| A request is already open | `{\"ok\": false, \"error\": \"already_open\"}` |\n\n**Then:** consoles get `handoff:new`; wait for `handoff:accepted`.",
+              "item": []
+            },
+            {
+              "name": "send · handoff:reply",
+              "description": "Applicant → staff chat message. 1–300 characters; ID-like numbers are replaced with `[hidden]`.\n\n**Send** (event name `handoff:reply`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\",\n  \"text\": \"Still failing. My passport is A1234567\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Sent | `{\"ok\": true}` |\n| No open hand-off | `{\"ok\": false, \"error\": \"not_open\"}` |\n| Empty text | `{\"ok\": false, \"error\": \"bad_text\"}` |\n\n**Then:** both sides get `handoff:reply` (show your own message from it, not from the input box).",
+              "item": []
+            }
+          ]
+        },
+        {
+          "name": "Socket.IO · listen",
+          "description": "Messages the customer app listens for. Add each name in the request's **Events** tab.",
+          "item": [
+            {
+              "name": "listen · handoff:accepted",
+              "description": "A staff member picked the request up. Show *\"Sherry Lim has joined\"*.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"staff_name\": \"Sherry Lim\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:message",
+              "description": "Staff → applicant chat message.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"handoff_no\": 1,\n  \"sender\": \"staff\",\n  \"staff_name\": \"Sherry Lim\",\n  \"text\": \"Hi, I'm Sherry. Try taking your phone out of its case and hold the passport still.\",\n  \"time\": \"2026-11-06T00:49:26.472Z\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:reply",
+              "description": "The applicant's own message, as saved (masked).\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"handoff_no\": 1,\n  \"sender\": \"customer\",\n  \"staff_name\": null,\n  \"text\": \"Still failing. My passport is [hidden]\",\n  \"time\": \"2026-11-06T00:49:26.475Z\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:history",
+              "description": "After `join_session` while a chat is open: the chat so far, so a refresh doesn't lose it.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"handoff_no\": 1,\n  \"staff_name\": \"Sherry Lim\",\n  \"messages\": [\n    {\n      \"session_id\": \"s1793926166132_1\",\n      \"handoff_no\": 1,\n      \"page_id\": \"account.step3\",\n      \"sender\": \"staff\",\n      \"staff_name\": \"Sherry Lim\",\n      \"text\": \"Hi, I'm Sherry. Try taking your phone out of its case and hold the passport still.\",\n      \"time\": \"2026-11-06T00:49:26.472Z\"\n    },\n    {\n      \"session_id\": \"s1793926166132_1\",\n      \"handoff_no\": 1,\n      \"page_id\": \"account.step3\",\n      \"sender\": \"customer\",\n      \"staff_name\": null,\n      \"text\": \"Still failing. My passport is [hidden]\",\n      \"time\": \"2026-11-06T00:49:26.475Z\"\n    }\n  ]\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:resolved",
+              "description": "Staff closed the chat. Close the panel; the applicant carries on from the same step.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\"\n}\n```\n",
+              "item": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ai",
+      "description": "The AI service on port 3001. The backend calls it from **Deva → Ask the AI**; these requests call it directly, to test it on its own.\n\nIn Docker, port 3001 is internal only, so these requests reach it only when you run it yourself: in `ai-agent/`, `node server.js` (Ollama must be running). `{{aiUrl}}` is `http://localhost:3001`.\n\nThe backend fills in `step`, `stepTitle`, `lastError`, `wording` and `language` from the database; the browser never sends them.",
+      "item": [
+        {
+          "name": "Health check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{aiUrl}}/api/health",
+              "host": [
+                "{{aiUrl}}"
+              ],
+              "path": [
+                "api",
+                "health"
+              ]
+            },
+            "description": "Is the service up?"
+          },
+          "response": [
+            {
+              "name": "Running",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{aiUrl}}/api/health",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "health"
+                  ]
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"status\": \"ok\",\n  \"service\": \"OCBC Sense AI\"\n}"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ask a question",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{aiUrl}}/api/ai/message",
+              "host": [
+                "{{aiUrl}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "message"
+              ]
+            },
+            "description": "Required: `question` (1–300 characters) and `step` (1–6). Optional: `stepTitle`, `lastError`, `wording` (standard / simple), `language` (en / zh / ms).\n\n`fallback: true` means *offer a person*. `type: preference_change` must be confirmed by the applicant before it's applied. Answer text depends on the model, so yours will differ from the examples.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"Why does the chip scan keep failing?\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Answer",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"Why does the chip scan keep failing?\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"type\": \"ai_answer\",\n  \"answer\": \"Take your phone out of its case. Hold the top of your phone flat on the back cover of your passport, and keep still for a few seconds.\",\n  \"action\": null,\n  \"requires_confirmation\": false,\n  \"fallback\": false\n}"
+            },
+            {
+              "name": "Preference change",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"Can you show this in Chinese?\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"type\": \"preference_change\",\n  \"answer\": \"Would you like to change the application language to Chinese?\",\n  \"action\": \"change_language\",\n  \"value\": \"zh\",\n  \"requires_confirmation\": true,\n  \"fallback\": false\n}"
+            },
+            {
+              "name": "Sensitive data (refused)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"My passport number is A1234567, is that ok?\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"type\": \"ai_answer\",\n  \"answer\": \"For your security, please do not share OTPs, passwords, passport numbers or other sensitive information with this assistant. Enter required information only in the application's designated secure fields.\",\n  \"action\": null,\n  \"requires_confirmation\": false,\n  \"fallback\": true\n}"
+            },
+            {
+              "name": "Not in the knowledge base",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"What's the weather tomorrow?\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"type\": \"ai_answer\",\n  \"answer\": \"I don't have enough verified information to answer that. Would you like to speak to a staff member?\",\n  \"action\": null,\n  \"requires_confirmation\": false,\n  \"fallback\": true\n}"
+            },
+            {
+              "name": "Empty question",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"\",\n  \"step\": 3,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"error\": \"Invalid customer question.\"\n}"
+            },
+            {
+              "name": "Step out of range",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{aiUrl}}/api/ai/message",
+                  "host": [
+                    "{{aiUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "ai",
+                    "message"
+                  ]
+                },
+                "description": "",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"question\": \"Why does the chip scan keep failing?\",\n  \"step\": 9,\n  \"stepTitle\": \"Scan your passport chip\",\n  \"lastError\": \"NFC_READ_FAILED\",\n  \"wording\": \"simple\",\n  \"language\": \"en\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"error\": \"Step must be an integer from 1 to 6.\"\n}"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Has type and fallback\", () => pm.expect(pm.response.json()).to.include.keys(\"type\", \"fallback\"));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jade (Dashboard)",
+      "description": "The staff console (Live Friction Queue, chat, Escalated tab, charts).\n\n**REST** runs in Postman as normal. **Socket.IO** can't be saved in a collection file, so each event is a page of notes: open a Socket.IO request (**New → Socket.IO**, URL `{{baseUrl}}`, **Connect**) and copy the payloads from here.",
+      "item": [
+        {
+          "name": "REST",
+          "description": "The staff console's calls.",
+          "item": [
+            {
+              "name": "Friction per page",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/insights/friction",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "insights",
+                    "friction"
+                  ]
+                },
+                "description": "Friction events per page and type, for the charts. Totals only. Reload it when `insights:update` arrives."
+              },
+              "response": [
+                {
+                  "name": "Counts (seeded data)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/insights/friction",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "insights",
+                        "friction"
+                      ]
+                    },
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "[\n  {\n    \"_id\": {\n      \"page\": \"account.step1\",\n      \"type\": \"friction:long_pause\"\n    },\n    \"count\": 15\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step2\",\n      \"type\": \"friction:long_pause\"\n    },\n    \"count\": 26\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step3\",\n      \"type\": \"friction:long_pause\"\n    },\n    \"count\": 26\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step3\",\n      \"type\": \"friction:repeated_errors\"\n    },\n    \"count\": 89\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step4\",\n      \"type\": \"friction:repeated_errors\"\n    },\n    \"count\": 9\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step5\",\n      \"type\": \"friction:back_and_forth\"\n    },\n    \"count\": 36\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step5\",\n      \"type\": \"friction:long_pause\"\n    },\n    \"count\": 24\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step5\",\n      \"type\": \"friction:repeated_errors\"\n    },\n    \"count\": 13\n  },\n  {\n    \"_id\": {\n      \"page\": \"account.step6\",\n      \"type\": \"friction:long_pause\"\n    },\n    \"count\": 13\n  }\n]"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Hand-offs (Escalated tab)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/handoffs?limit=50",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "handoffs"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "50"
+                    }
+                  ]
+                },
+                "description": "One row per session that asked for help: live sessions first, newest first. `limit` 1–200, default 50.\n\n- `status`: waiting / active / resolved (this session's latest request)\n- `outcome`: in_progress → Pending, submitted → Solved, abandoned / not_eligible → Unable to Solve\n- `wait_s`, `help_s`: seconds (null until it happens)\n\nReload it when `insights:update` arrives."
+              },
+              "response": [
+                {
+                  "name": "Live one with staff",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/handoffs?limit=2",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "handoffs"
+                      ],
+                      "query": [
+                        {
+                          "key": "limit",
+                          "value": "2"
+                        }
+                      ]
+                    },
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "[\n  {\n    \"session_id\": \"s1793926166132_1\",\n    \"source\": \"live\",\n    \"outcome\": \"in_progress\",\n    \"handoff_count\": 1,\n    \"status\": \"active\",\n    \"page_id\": \"account.step3\",\n    \"step_no\": 3,\n    \"step_title\": \"Scan your passport chip\",\n    \"last_error\": \"NFC_READ_FAILED\",\n    \"requested_at\": \"2026-11-06T00:49:26.464Z\",\n    \"accepted_at\": \"2026-11-06T00:49:26.469Z\",\n    \"resolved_at\": null,\n    \"wait_s\": 0,\n    \"help_s\": null,\n    \"ended_at\": null,\n    \"message_count\": 2\n  },\n  {\n    \"session_id\": \"syn0298\",\n    \"source\": \"synthetic\",\n    \"outcome\": \"submitted\",\n    \"handoff_count\": 1,\n    \"status\": \"resolved\",\n    \"page_id\": \"account.step5\",\n    \"step_no\": 5,\n    \"step_title\": \"Supporting documents\",\n    \"last_error\": null,\n    \"requested_at\": \"2026-11-19T13:24:08.000Z\",\n    \"accepted_at\": \"2026-11-19T13:24:59.000Z\",\n    \"resolved_at\": \"2026-11-19T13:27:00.000Z\",\n    \"wait_s\": 51,\n    \"help_s\": 121,\n    \"ended_at\": \"2026-11-19T13:29:53.000Z\",\n    \"message_count\": 0\n  }\n]"
+                },
+                {
+                  "name": "After it's resolved and submitted",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/handoffs?limit=3",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "handoffs"
+                      ],
+                      "query": [
+                        {
+                          "key": "limit",
+                          "value": "3"
+                        }
+                      ]
+                    },
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "[\n  {\n    \"session_id\": \"s1793926166132_1\",\n    \"source\": \"live\",\n    \"outcome\": \"submitted\",\n    \"handoff_count\": 1,\n    \"status\": \"resolved\",\n    \"page_id\": \"account.step3\",\n    \"step_no\": 3,\n    \"step_title\": \"Scan your passport chip\",\n    \"last_error\": \"NFC_READ_FAILED\",\n    \"requested_at\": \"2026-11-06T00:49:26.464Z\",\n    \"accepted_at\": \"2026-11-06T00:49:26.469Z\",\n    \"resolved_at\": \"2026-11-06T00:49:27.133Z\",\n    \"wait_s\": 0,\n    \"help_s\": 1,\n    \"ended_at\": \"2026-11-06T00:49:27.338Z\",\n    \"message_count\": 2\n  },\n  {\n    \"session_id\": \"syn0298\",\n    \"source\": \"synthetic\",\n    \"outcome\": \"submitted\",\n    \"handoff_count\": 1,\n    \"status\": \"resolved\",\n    \"page_id\": \"account.step5\",\n    \"step_no\": 5,\n    \"step_title\": \"Supporting documents\",\n    \"last_error\": null,\n    \"requested_at\": \"2026-11-19T13:24:08.000Z\",\n    \"accepted_at\": \"2026-11-19T13:24:59.000Z\",\n    \"resolved_at\": \"2026-11-19T13:27:00.000Z\",\n    \"wait_s\": 51,\n    \"help_s\": 121,\n    \"ended_at\": \"2026-11-19T13:29:53.000Z\",\n    \"message_count\": 0\n  },\n  {\n    \"session_id\": \"syn0293\",\n    \"source\": \"synthetic\",\n    \"outcome\": \"not_eligible\",\n    \"handoff_count\": 1,\n    \"status\": \"resolved\",\n    \"page_id\": \"account.step1\",\n    \"step_no\": 1,\n    \"step_title\": \"Check you're eligible\",\n    \"last_error\": \"AGE_REQUIREMENT\",\n    \"requested_at\": \"2026-11-19T10:16:14.000Z\",\n    \"accepted_at\": \"2026-11-19T10:16:34.000Z\",\n    \"resolved_at\": \"2026-11-19T10:18:43.000Z\",\n    \"wait_s\": 20,\n    \"help_s\": 129,\n    \"ended_at\": \"2026-11-19T10:18:58.000Z\",\n    \"message_count\": 0\n  }\n]"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Chat messages of a session",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/sessions/{{session_id}}/messages",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "sessions",
+                    "{{session_id}}",
+                    "messages"
+                  ]
+                },
+                "description": "The saved transcript, oldest first. ID-like numbers are already `[hidden]`."
+              },
+              "response": [
+                {
+                  "name": "A chat",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/s1793926166132_1/messages",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "s1793926166132_1",
+                        "messages"
+                      ]
+                    },
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "[\n  {\n    \"session_id\": \"s1793926166132_1\",\n    \"handoff_no\": 1,\n    \"page_id\": \"account.step3\",\n    \"sender\": \"staff\",\n    \"staff_name\": \"Sherry Lim\",\n    \"text\": \"Hi, I'm Sherry. Try taking your phone out of its case and hold the passport still.\",\n    \"time\": \"2026-11-06T00:49:26.472Z\"\n  },\n  {\n    \"session_id\": \"s1793926166132_1\",\n    \"handoff_no\": 1,\n    \"page_id\": \"account.step3\",\n    \"sender\": \"customer\",\n    \"staff_name\": null,\n    \"text\": \"Still failing. My passport is [hidden]\",\n    \"time\": \"2026-11-06T00:49:26.475Z\"\n  }\n]"
+                },
+                {
+                  "name": "No chat yet",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/sessions/{{session_id}}/messages",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "sessions",
+                        "{{session_id}}",
+                        "messages"
+                      ]
+                    },
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    }
+                  ],
+                  "body": "[]"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status 200\", () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Socket.IO · send",
+          "description": "Messages the console sends. Connect a Socket.IO request to `{{baseUrl}}` first.",
+          "item": [
+            {
+              "name": "send · join_console",
+              "description": "Send once after connecting (and after a reconnect). Joins the `console` room.\n\n**Send** (event name `join_console`): no message.\n\n**Then:** you get `handoff:queue` with every open request.",
+              "item": []
+            },
+            {
+              "name": "send · handoff:accepted",
+              "description": "**Pick Up Chat.** The first staff member to send this gets the chat.\n\n**Send** (event name `handoff:accepted`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\",\n  \"staff_name\": \"Sherry Lim\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Picked up | `{\"ok\": true}` |\n| Someone else got it first | `{\"ok\": false, \"error\": \"already_taken\"}` |\n| No open request | `{\"ok\": false, \"error\": \"not_open\"}` |\n\n**Then:** the applicant gets `handoff:accepted`; every console gets `handoff:taken`.",
+              "item": []
+            },
+            {
+              "name": "send · handoff:message",
+              "description": "Staff → applicant chat message. 1–300 characters, masked like the applicant's.\n\n**Send** (event name `handoff:message`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\",\n  \"text\": \"Hi, I'm Sherry. Try taking your phone out of its case and hold the passport still.\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Sent | `{\"ok\": true}` |\n| Not picked up yet | `{\"ok\": false, \"error\": \"not_picked_up\"}` |\n| No open request | `{\"ok\": false, \"error\": \"not_open\"}` |\n| Empty text | `{\"ok\": false, \"error\": \"bad_text\"}` |\n\n**Then:** the applicant and every console get `handoff:message`.",
+              "item": []
+            },
+            {
+              "name": "send · handoff:resolved",
+              "description": "**Resolve & Close.**\n\n**Send** (event name `handoff:resolved`, type JSON, Ack on):\n```json\n{\n  \"session_id\": \"{{session_id}}\"\n}\n```\n\n**Ack examples**\n\n| When | Ack |\n|---|---|\n| Closed | `{\"ok\": true}` |\n| Already closed | `{\"ok\": false, \"error\": \"not_open\"}` |\n\n**Then:** the applicant and every console get `handoff:resolved`.",
+              "item": []
+            }
+          ]
+        },
+        {
+          "name": "Socket.IO · listen",
+          "description": "Messages the console listens for. Add each name in the request's **Events** tab.",
+          "item": [
+            {
+              "name": "listen · handoff:queue",
+              "description": "After `join_console`: every open request (empty list if none). Use it to rebuild the Live Friction Queue after a refresh.\n\n**Example payload received:**\n```json\n[\n  {\n    \"session_id\": \"s1793926166132_1\",\n    \"page_id\": \"account.step3\",\n    \"handoff_no\": 1,\n    \"share\": {\n      \"step_no\": 3,\n      \"step_title\": \"Scan your passport chip\",\n      \"trigger\": \"friction:repeated_errors\",\n      \"last_error\": \"NFC_READ_FAILED\",\n      \"failed_attempts\": 2\n    },\n    \"events\": [\n      {\n        \"type\": \"error:NFC_READ_FAILED\",\n        \"time\": \"2026-11-06T00:49:26.446Z\"\n      },\n      {\n        \"type\": \"error:NFC_READ_FAILED\",\n        \"time\": \"2026-11-06T00:49:26.442Z\"\n      },\n      {\n        \"type\": \"ai_question\",\n        \"time\": \"2026-11-06T00:49:26.201Z\"\n      }\n    ],\n    \"requested_at\": \"2026-11-06T00:49:26.463Z\",\n    \"staff_name\": \"Sherry Lim\"\n  }\n]\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:new",
+              "description": "A new help request: add a card to the Live Friction Queue. `events` is the applicant's last 10 events on that step.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"page_id\": \"account.step3\",\n  \"handoff_no\": 1,\n  \"share\": {\n    \"step_no\": 3,\n    \"step_title\": \"Scan your passport chip\",\n    \"trigger\": \"friction:repeated_errors\",\n    \"last_error\": \"NFC_READ_FAILED\",\n    \"failed_attempts\": 2\n  },\n  \"events\": [\n    {\n      \"type\": \"error:NFC_READ_FAILED\",\n      \"time\": \"2026-11-06T00:49:26.446Z\"\n    },\n    {\n      \"type\": \"error:NFC_READ_FAILED\",\n      \"time\": \"2026-11-06T00:49:26.442Z\"\n    },\n    {\n      \"type\": \"ai_question\",\n      \"time\": \"2026-11-06T00:49:26.201Z\"\n    }\n  ],\n  \"requested_at\": \"2026-11-06T00:49:26.463Z\",\n  \"staff_name\": null\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:taken",
+              "description": "Someone picked a request up: show who, and disable **Pick Up Chat** on the other consoles.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"staff_name\": \"Sherry Lim\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:message",
+              "description": "A staff message, as saved (also your own).\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"handoff_no\": 1,\n  \"sender\": \"staff\",\n  \"staff_name\": \"Sherry Lim\",\n  \"text\": \"Hi, I'm Sherry. Try taking your phone out of its case and hold the passport still.\",\n  \"time\": \"2026-11-06T00:49:26.472Z\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:reply",
+              "description": "Applicant → staff chat message (masked).\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\",\n  \"handoff_no\": 1,\n  \"sender\": \"customer\",\n  \"staff_name\": null,\n  \"text\": \"Still failing. My passport is [hidden]\",\n  \"time\": \"2026-11-06T00:49:26.475Z\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · handoff:resolved",
+              "description": "A chat was closed: remove the card.\n\n**Example payload received:**\n```json\n{\n  \"session_id\": \"s1793926166132_1\"\n}\n```\n",
+              "item": []
+            },
+            {
+              "name": "listen · insights:update",
+              "description": "Something changed (an event, a hand-off step, a submit or an early end). Reload **Friction per page** and **Hand-offs**.\n\n**Example payload received:**\nNo payload.\n",
+              "item": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "aiUrl",
+      "value": "http://localhost:3001"
+    },
+    {
+      "key": "session_id",
+      "value": ""
+    }
+  ]
+}

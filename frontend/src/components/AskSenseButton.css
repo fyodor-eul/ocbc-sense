@@ -1,0 +1,28 @@
+.ask-sense-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.ask-sense {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  color: var(--red);
+  border: 1.5px solid var(--red);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .ask-sense-row {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 20;
+  }
+}

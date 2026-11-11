@@ -1,0 +1,25 @@
+.splash {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--red);
+  color: #fff;
+}
+.splash__name { margin: 0; font-size: 2rem; font-weight: 700; }
+.splash__tag { margin: 0; }
+.splash__spinner {
+  margin-top: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .splash__spinner { animation-duration: 3s; }
+}

@@ -1,0 +1,11 @@
+.progress__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.progress__label { margin: 0; font-size: 0.875rem; color: var(--text-secondary); }
+.progress__right { font-size: 0.875rem; color: var(--text-secondary); }
+.progress__segments { display: flex; gap: 4px; }
+.progress__seg { flex: 1; height: 6px; border-radius: 3px; background: var(--border); }
+.progress__seg--on { background: var(--red); }

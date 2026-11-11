@@ -1,0 +1,5 @@
+node_modules
+npm-debug.log
+data/csv
+test-client.js
+.git

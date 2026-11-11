@@ -1,0 +1,46 @@
+# Folder layout this file expects:
+#   project/
+#   ├── backend/          ← this folder (docker-compose.yml lives here)
+#   └── ai-agent/         ← the AI service
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped           # comes back after Docker or the laptop restarts
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 30s        # mongosh starts slowly on small servers
+      retries: 10
+      start_period: 60s   # time for MongoDB's first start
+
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama-models:/root/.ollama   # downloaded models survive container restarts
+    restart: unless-stopped
+
+  ai:
+    build: ../ai-agent
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped           # retries until Ollama and its models are ready
+
+  backend:
+    build: .
+    ports:
+      - "3000:3000"                   # the only port open to browsers
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      AI_URL: http://ai:3001
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
+  ollama-models:

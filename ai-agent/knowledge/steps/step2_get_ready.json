@@ -1,0 +1,69 @@
+
+{
+  "step_id": "account.step2",
+  "title": "Get ready",
+  "screens": [
+    {
+      "screen_id": "get_ready",
+      "description": "The customer prepares three required items before continuing with the application."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "get_ready_overview",
+      "screen_id": "get_ready",
+      "field_id": null,
+      "topic": "Get Ready",
+      "content": "Before continuing, the customer is asked to prepare a biometric passport, a national ID card, and a phone with NFC and a camera."
+    },
+    {
+      "id": "biometric_passport",
+      "screen_id": "get_ready",
+      "field_id": "biometric_passport",
+      "topic": "Biometric Passport",
+      "content": "A biometric passport contains an electronic chip. Look for the small chip symbol on the passport cover. The passport chip will be scanned in Step 3."
+    },
+    {
+      "id": "national_id_card",
+      "screen_id": "get_ready",
+      "field_id": "national_id_card",
+      "topic": "National ID Card",
+      "content": "Prepare your national ID card. The application will ask you to take a photo of this card during Step 4 to capture its details."
+    },
+    {
+      "id": "phone_nfc_camera",
+      "screen_id": "get_ready",
+      "field_id": "phone_nfc_camera",
+      "topic": "Phone with NFC and Camera",
+      "content": "The application asks for a phone with NFC and a camera. NFC is used to read the electronic chip in the passport. The camera is used during identity verification."
+    },
+    {
+      "id": "nfc_explanation",
+      "screen_id": "get_ready",
+      "field_id": "nfc_help",
+      "topic": "What is NFC?",
+      "content": "NFC stands for Near Field Communication. It allows compatible devices to communicate over very short distances. The application uses NFC to read the electronic chip in a biometric passport."
+    },
+    {
+      "id": "nfc_compatibility",
+      "screen_id": "get_ready",
+      "field_id": "nfc_help",
+      "topic": "Checking NFC Compatibility",
+      "content": "The screen includes a help section labelled 'Not sure your phone has NFC?'. The customer can open this section for further guidance. The exact instructions depend on the phone and have not yet been specified in the prototype provided."
+    },
+    {
+      "id": "readiness_checklist",
+      "screen_id": "get_ready",
+      "field_id": "readiness_checklist",
+      "topic": "Readiness Checklist",
+      "content": "The screen displays three checklist items and a readiness counter. The customer should confirm that all three items are ready before continuing."
+    },
+    {
+      "id": "continue_disabled",
+      "screen_id": "get_ready",
+      "field_id": "continue_button",
+      "topic": "Continue Button Disabled",
+      "content": "The Continue button is initially disabled while the readiness checklist is incomplete. The customer should confirm all three required items before proceeding."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-top {
+  min-height: 72px;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-brand,
+.navbar-status,
+.staff-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ocbc-logo {
+  color: #d00020;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.brand-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-details strong {
+  font-size: 14px;
+  color: #222;
+}
+
+.brand-details span {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.navbar-status {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.live-status,
+.audio-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #f4f6f8;
+  border-radius: 5px;
+}
+
+.live-status svg {
+  color: #16a34a;
+}
+
+.audio-status svg {
+  color: #d00020;
+}
+
+.staff-profile {
+  border-left: 1px solid #e5e7eb;
+  padding-left: 16px;
+}
+
+.staff-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1e293b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.staff-profile strong,
+.staff-profile small {
+  display: block;
+}
+
+.staff-profile strong {
+  color: #222;
+}
+
+.staff-profile small {
+  color: #777;
+  margin-top: 3px;
+}
+
+.navbar-tabs {
+  display: flex;
+  gap: 24px;
+  padding: 0 28px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 15px 0;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 13px;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  color: #d00020;
+  font-weight: 600;
+  border-bottom-color: #d00020;
+}
+
+.tab:hover {
+  color: #d00020;
+}
+
+@media (max-width: 850px) {
+  .navbar-top {
+    flex-wrap: wrap;
+  }
+
+  .navbar-status {
+    flex-wrap: wrap;
+  }
+}

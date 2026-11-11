@@ -1,0 +1,60 @@
+/* Guided layout highlight: a gentle spotlight that never blocks the page. */
+
+/* Overlay is visual only; every control stays clickable. */
+.driver-overlay-container,
+.driver-overlay-container * {
+  pointer-events: none !important;
+}
+
+.driver-popover.guided-popover {
+  max-width: min(320px, calc(100vw - 2rem));
+  padding: 0.875rem 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 2px solid var(--guidance);
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.guided-popover .driver-popover-description {
+  margin: 0;
+  padding-right: 1.5rem; /* room for the close button */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.guided-popover .driver-popover-close-btn {
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--text-secondary);
+}
+
+.guided-popover .driver-popover-close-btn:focus-visible {
+  outline: 3px solid var(--guidance);
+  outline-offset: 2px;
+}
+
+/* Popover arrow follows the guidance colour. */
+.guided-popover .driver-popover-arrow-side-top.driver-popover-arrow {
+  border-top-color: var(--guidance);
+}
+.guided-popover .driver-popover-arrow-side-bottom.driver-popover-arrow {
+  border-bottom-color: var(--guidance);
+}
+.guided-popover .driver-popover-arrow-side-left.driver-popover-arrow {
+  border-left-color: var(--guidance);
+}
+.guided-popover .driver-popover-arrow-side-right.driver-popover-arrow {
+  border-right-color: var(--guidance);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .driver-popover.guided-popover {
+    transition: none;
+  }
+}

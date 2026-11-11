@@ -1,0 +1,142 @@
+{
+  "step_id": "account.step6",
+  "title": "Review and submit",
+  "screens": [
+    {
+      "screen_id": "review_application",
+      "description": "The customer reviews the information entered during the application and confirms the required declarations."
+    },
+    {
+      "screen_id": "application_submitted",
+      "description": "The application displays a confirmation screen after the customer submits their application."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "review_overview",
+      "screen_id": "review_application",
+      "field_id": null,
+      "topic": "Review Your Application",
+      "content": "Step 6 allows the customer to review the information provided during the application before submitting it."
+    },
+    {
+      "id": "personal_details",
+      "screen_id": "review_application",
+      "field_id": "personal_details",
+      "topic": "Personal Details",
+      "content": "The review screen displays personal information collected during the application. The customer should check that the displayed information is accurate before submitting."
+    },
+    {
+      "id": "passport_details",
+      "screen_id": "review_application",
+      "field_id": "passport_details",
+      "topic": "Passport Details",
+      "content": "The customer should review the passport-related information displayed in the application and check it for accuracy."
+    },
+    {
+      "id": "contact_details",
+      "screen_id": "review_application",
+      "field_id": null,
+      "topic": "Contact Details",
+      "content": "Step 6 asks the customer to enter their mobile number and email address before reviewing the application. The bank uses them to send updates and requests for documents."
+    },
+    {
+      "id": "mobile_number",
+      "screen_id": "review_application",
+      "field_id": "mobile_number",
+      "topic": "Mobile Number",
+      "content": "Enter your mobile number in the mobile number field. If the application reports that the mobile number is not valid (CONTACT_MOBILE_INVALID), check the digits and the country code."
+    },
+    {
+      "id": "country_code",
+      "screen_id": "review_application",
+      "field_id": "country_code",
+      "topic": "Country Code",
+      "content": "The country code is the international telephone prefix associated with a country or territory. Select the code that matches your mobile number before entering the remaining digits."
+    },
+    {
+      "id": "email_address",
+      "screen_id": "review_application",
+      "field_id": "email_address",
+      "topic": "Email Address",
+      "content": "Enter your email address in the email field, for example name@example.com. If the application reports that the email is not valid (CONTACT_EMAIL_INVALID), check it for typing mistakes. Updates and document requests are sent to this address."
+    },
+    {
+      "id": "edit_information",
+      "screen_id": "review_application",
+      "field_id": "edit_button",
+      "topic": "Edit Application Information",
+      "content": "If the review screen provides an Edit option, the customer can use it to return to the relevant section and correct information before submitting."
+    },
+    {
+      "id": "declarations_overview",
+      "screen_id": "review_application",
+      "field_id": "declarations",
+      "topic": "Declarations",
+      "content": "The declarations section asks the customer to review and confirm the statements presented by the application. The customer should read and understand the statements before selecting any confirmation checkbox."
+    },
+    {
+      "id": "declaration_checkbox",
+      "screen_id": "review_application",
+      "field_id": "declaration_checkbox",
+      "topic": "Declaration Checkbox",
+      "content": "A declaration checkbox records the customer's confirmation of the statement shown beside it. The customer must make this decision themselves. The AI assistant must not select the checkbox on their behalf."
+    },
+    {
+      "id": "terms_conditions",
+      "screen_id": "review_application",
+      "field_id": "terms_conditions",
+      "topic": "Terms and Conditions",
+      "content": "If the application displays terms and conditions, the customer should review the actual terms before agreeing. The AI assistant can explain verified wording but must not invent legal terms or claim that agreement is unnecessary."
+    },
+    {
+      "id": "submit_application",
+      "screen_id": "review_application",
+      "field_id": "submit_button",
+      "topic": "Submit Application Button",
+      "content": "The Submit application button is intended to send the completed application for processing. The customer should review their information and required declarations before selecting it."
+    },
+    {
+      "id": "submit_button_disabled",
+      "screen_id": "review_application",
+      "field_id": "submit_button",
+      "topic": "Submit Button Disabled",
+      "content": "If the Submit application button is disabled, the customer should check for incomplete required fields or confirmations. The AI assistant cannot determine the exact reason without a status provided by the application."
+    },
+    {
+      "id": "review_incorrect_details",
+      "screen_id": "review_application",
+      "field_id": null,
+      "topic": "Incorrect Application Details",
+      "content": "If the customer notices incorrect information, they should use an available Edit option to correct it before submitting. If they cannot edit the information, they can request human assistance."
+    },
+    {
+      "id": "submission_confirmation",
+      "screen_id": "application_submitted",
+      "field_id": null,
+      "topic": "Application Submitted",
+      "content": "The submission confirmation screen indicates that the application has been submitted. Submission does not automatically mean the bank account has been approved."
+    },
+    {
+      "id": "application_approval",
+      "screen_id": "application_submitted",
+      "field_id": null,
+      "topic": "Application Approval",
+      "content": "Submitting an application does not guarantee account approval. The AI assistant must not claim that an account is approved unless an authorised application status explicitly confirms it."
+    },
+    {
+      "id": "submission_problem",
+      "screen_id": "review_application",
+      "field_id": null,
+      "topic": "Application Submission Problems",
+      "content": "If the application reports a submission error, the customer can follow the displayed instructions or request human assistance. The AI assistant must not claim that submission succeeded without confirmation from the application."
+    },
+    {
+      "id": "human_assistance",
+      "screen_id": "review_application",
+      "field_id": null,
+      "topic": "Request Human Assistance",
+      "content": "The customer can use Ask Sense to request help understanding the review screen or ask to speak with a human staff member if they are unsure about the application."
+    }
+  ]
+}

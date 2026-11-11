@@ -1,0 +1,31 @@
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-button);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn--full { width: 100%; }
+
+.btn--primary { min-height: 3.5rem; background: var(--red); color: #fff; }
+.btn--primary:hover:not(:disabled),
+.btn--primary:active:not(:disabled) { background: var(--red-pressed); }
+
+.btn--secondary { background: var(--card); color: var(--text); border-color: var(--border); }
+.btn--outline   { background: var(--card); color: var(--red);  border-color: var(--red); }
+.btn--tertiary  { background: transparent; color: var(--red); width: auto; }
+
+.btn:disabled {
+  background: var(--border);
+  color: var(--text-secondary);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+.btn--tertiary:disabled { background: transparent; }

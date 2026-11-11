@@ -1,0 +1,50 @@
+.option {
+  width: 100%;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+}
+.option__body { flex: 1; min-width: 0; display: grid; gap: 0.25rem; overflow-wrap: anywhere; }
+.option__title { font-weight: 600; }
+.option__note { font-size: 0.875rem; color: var(--text-secondary); }
+
+.option__mark {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #dde3ee;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option--on { border: 1.5px solid var(--red); padding: calc(1rem - 0.5px); }
+.option--on .option__mark { background: var(--red); }
+.option--red.option--on { background: var(--red-tint); }
+.option--blue.option--on { background: var(--guidance-bg); }
+
+.option__tag {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--red);
+  border-radius: 999px;
+}

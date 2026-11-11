@@ -1,0 +1,72 @@
+.guidance {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--guidance-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.guidance__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.guidance__icon {
+  flex: none;
+  margin-top: 0.125rem;
+  color: var(--guidance);
+}
+
+.guidance__label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.guidance__message {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.guidance__listen {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0 0.75rem;
+
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.guidance__listen:hover {
+  border-color: var(--guidance);
+}
+
+.guidance__listen:focus-visible {
+  outline: 3px solid var(--guidance);
+  outline-offset: 2px;
+}
+.guidance--audio-only {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}

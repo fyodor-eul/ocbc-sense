@@ -1,0 +1,43 @@
+.check {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.check + .check { border-top: 1px solid var(--border); }
+.check__icon {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--guidance);
+  background: var(--guidance-bg);
+  border-radius: 12px;
+}
+.check__text { flex: 1; min-width: 0; display: grid; }
+.check__label { font-weight: 600; }
+.check__note { font-size: 0.875rem; color: var(--text-secondary); }
+.check__box {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #fff;
+  border: 2px solid #b8c2d6;
+  border-radius: 6px;
+}
+.check__box--on { background: var(--red); border-color: var(--red); }

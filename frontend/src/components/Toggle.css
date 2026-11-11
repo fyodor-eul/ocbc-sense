@@ -1,0 +1,21 @@
+.toggle {
+  min-width: 3.5rem;
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.toggle__track {
+  width: 3rem;
+  height: 1.75rem;
+  padding: 2px;
+  border-radius: 999px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+}
+.toggle__track--on { background: var(--red); justify-content: flex-end; }
+.toggle__knob { width: 1.5rem; height: 1.5rem; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }

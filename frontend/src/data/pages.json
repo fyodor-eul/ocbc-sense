@@ -1,0 +1,235 @@
+[
+  {
+    "_id": "welcome",
+    "step_no": null,
+    "title": "Welcome",
+    "text": {
+      "standard": "Choose a demo applicant to continue.",
+      "simple": "Pick a person to start."
+    },
+    "verified_info": null,
+    "suggested_questions": [],
+    "title_zh": "欢迎",
+    "text_zh": {
+      "standard": "选择一个演示申请人以继续。",
+      "simple": "选择一位申请人开始。"
+    },
+    "title_ms": "Selamat datang",
+    "text_ms": {
+      "standard": "Pilih pemohon demo untuk meneruskan.",
+      "simple": "Pilih seseorang untuk bermula."
+    }
+  },
+  {
+    "_id": "preferences",
+    "step_no": null,
+    "title": "How would you like us to help?",
+    "text": {
+      "standard": "Choose your language and how the app looks and sounds. You can change this at any time.",
+      "simple": "Pick your language and what helps you. You can change it later."
+    },
+    "verified_info": null,
+    "suggested_questions": [],
+    "title_zh": "您希望我们如何协助？",
+    "text_zh": {
+      "standard": "选择语言以及应用的外观和语音设置。您可以随时更改。",
+      "simple": "选择语言和适合您的设置。您以后可以更改。"
+    },
+    "title_ms": "Bagaimanakah anda mahu kami membantu?",
+    "text_ms": {
+      "standard": "Pilih bahasa serta rupa dan bunyi aplikasi. Anda boleh mengubahnya pada bila-bila masa.",
+      "simple": "Pilih bahasa dan tetapan yang sesuai untuk anda. Anda boleh mengubahnya kemudian."
+    }
+  },
+  {
+    "_id": "start",
+    "step_no": null,
+    "title": "Sign up",
+    "text": {
+      "standard": "Choose how you would like to open your account.",
+      "simple": "How do you want to open your account?"
+    },
+    "verified_info": null,
+    "suggested_questions": [],
+    "title_zh": "注册",
+    "text_zh": {
+      "standard": "选择您希望如何开设账户。",
+      "simple": "您想如何开设账户？"
+    },
+    "title_ms": "Daftar",
+    "text_ms": {
+      "standard": "Pilih cara anda mahu membuka akaun.",
+      "simple": "Bagaimanakah anda mahu membuka akaun?"
+    }
+  },
+  {
+    "_id": "account.step1",
+    "step_no": 1,
+    "title": "Check you're eligible",
+    "text": {
+      "standard": "Confirm your passport country and that you are 18 or older.",
+      "simple": "Check if you can open an account with this app."
+    },
+    "verified_info": "Remote account opening with an e-passport is for applicants aged 18 and above with a biometric passport from Hong Kong, Malaysia, Indonesia or Mainland China.",
+    "suggested_questions": [
+      "How do I know if my passport is biometric?",
+      "What can I do if my passport isn't on the list?"
+    ],
+    "title_zh": "检查您的申请资格",
+    "text_zh": {
+      "standard": "确认您的护照国家/地区，以及您是否年满18岁。",
+      "simple": "检查您是否可以通过此应用开设账户。"
+    },
+    "title_ms": "Semak kelayakan anda",
+    "text_ms": {
+      "standard": "Sahkan negara pasport anda dan bahawa anda berumur 18 tahun atau lebih.",
+      "simple": "Semak sama ada anda boleh membuka akaun melalui aplikasi ini."
+    }
+  },
+  {
+    "_id": "account.step2",
+    "step_no": 2,
+    "title": "Get ready",
+    "text": {
+      "standard": "Have your biometric passport, national ID and an NFC-capable phone ready before you continue.",
+      "simple": "Get these 3 things ready: your passport, your ID card and your phone."
+    },
+    "verified_info": "You need a biometric passport, your national ID card, and a phone that can read NFC chips. A biometric passport has a small chip symbol on its cover.",
+    "suggested_questions": [
+      "What is NFC?",
+      "How do I check if my phone has NFC?"
+    ],
+    "title_zh": "做好准备",
+    "text_zh": {
+      "standard": "继续之前，请准备好生物识别护照、身份证和支持NFC的手机。",
+      "simple": "准备好护照、身份证和手机。"
+    },
+    "title_ms": "Bersedia",
+    "text_ms": {
+      "standard": "Sediakan pasport biometrik, kad pengenalan dan telefon yang menyokong NFC sebelum meneruskan.",
+      "simple": "Sediakan pasport, kad pengenalan dan telefon anda."
+    }
+  },
+  {
+    "_id": "account.step3",
+    "step_no": 3,
+    "title": "Scan your passport chip",
+    "text": {
+      "standard": "Hold your phone against your passport so the app can read its chip using NFC.",
+      "simple": "Put your phone on your passport and keep still."
+    },
+    "verified_info": "The app reads the chip inside your passport using NFC. Hold your phone flat against the passport and keep both still until the scan finishes. Removing a thick phone case can help.",
+    "suggested_questions": [
+      "Why won't my passport scan?",
+      "Where is the chip on my passport?",
+      "How do I know if my phone has NFC?"
+    ],
+    "title_zh": "扫描护照芯片",
+    "text_zh": {
+      "standard": "将手机贴近护照，以便应用通过NFC读取芯片。",
+      "simple": "将手机放在护照上并保持不动。"
+    },
+    "title_ms": "Imbas cip pasport",
+    "text_ms": {
+      "standard": "Letakkan telefon pada pasport supaya aplikasi boleh membaca cip menggunakan NFC.",
+      "simple": "Letakkan telefon pada pasport dan jangan gerakkannya."
+    }
+  },
+  {
+    "_id": "account.step4",
+    "step_no": 4,
+    "title": "Verify it's you",
+    "text": {
+      "standard": "Take a photo of your national ID and complete a face check.",
+      "simple": "Take a photo of your ID card. Then look at the camera."
+    },
+    "verified_info": "The app checks that you are the passport holder and checks your national ID. In this prototype, verification is simulated and no real biometric data is collected.",
+    "suggested_questions": [
+      "Why couldn't it read my ID?",
+      "What happens with my face photo?"
+    ],
+    "title_zh": "验证您的身份",
+    "text_zh": {
+      "standard": "拍摄身份证照片并完成人脸验证。",
+      "simple": "拍摄身份证照片，然后看向摄像头。"
+    },
+    "title_ms": "Sahkan identiti anda",
+    "text_ms": {
+      "standard": "Ambil gambar kad pengenalan dan lengkapkan pemeriksaan wajah.",
+      "simple": "Ambil gambar kad pengenalan. Kemudian lihat kamera."
+    }
+  },
+  {
+    "_id": "account.step5",
+    "step_no": 5,
+    "title": "Supporting documents",
+    "text": {
+      "standard": "Upload your qualifying supporting documents within the required timeframe.",
+      "simple": "Upload the documents we ask for."
+    },
+    "verified_info": "You need to provide qualifying supporting documents within the required timeframe. The accepted documents are listed on this screen.",
+    "suggested_questions": [
+      "Which documents are accepted?",
+      "How long do I have to upload them?",
+      "Why was my file rejected?"
+    ],
+    "title_zh": "辅助文件",
+    "text_zh": {
+      "standard": "请在规定时间内上传符合要求的辅助文件。",
+      "simple": "上传我们要求的文件。"
+    },
+    "title_ms": "Dokumen sokongan",
+    "text_ms": {
+      "standard": "Muat naik dokumen sokongan yang layak dalam tempoh yang ditetapkan.",
+      "simple": "Muat naik dokumen yang diminta."
+    }
+  },
+  {
+    "_id": "account.step6",
+    "step_no": 6,
+    "title": "Review and submit",
+    "text": {
+      "standard": "Review your details and declarations, then submit your application.",
+      "simple": "Check everything, then send your application."
+    },
+    "verified_info": "Check your details before you submit. After OCBC receives your supporting documents, it may take up to 21 working days to tell you whether your account has been opened.",
+    "suggested_questions": [
+      "What happens after I submit?",
+      "How long until my account is ready?"
+    ],
+    "title_zh": "检查并提交",
+    "text_zh": {
+      "standard": "检查您的资料和声明，然后提交申请。",
+      "simple": "检查所有资料，然后提交申请。"
+    },
+    "title_ms": "Semak dan hantar",
+    "text_ms": {
+      "standard": "Semak maklumat dan pengisytiharan anda, kemudian hantar permohonan.",
+      "simple": "Semak semuanya, kemudian hantar permohonan."
+    }
+  },
+  {
+    "_id": "account.submitted",
+    "step_no": null,
+    "title": "What happens next",
+    "text": {
+      "standard": "Your application has been submitted. We will notify you once it has been reviewed.",
+      "simple": "Your application is sent. We will tell you when it is ready."
+    },
+    "verified_info": "OCBC may take up to 21 working days after receiving your supporting documents to confirm your account. You may need to complete an initial deposit or other follow-up steps.",
+    "suggested_questions": [
+      "What do I need to do next?",
+      "When will I hear back?"
+    ],
+    "title_zh": "接下来会发生什么",
+    "text_zh": {
+      "standard": "您的申请已提交。审核完成后，我们会通知您。",
+      "simple": "申请已提交。我们会在审核后通知您。"
+    },
+    "title_ms": "Apa yang berlaku seterusnya",
+    "text_ms": {
+      "standard": "Permohonan anda telah dihantar. Kami akan memaklumkan anda selepas semakan.",
+      "simple": "Permohonan dihantar. Kami akan memaklumkan anda selepas semakan."
+    }
+  }
+]

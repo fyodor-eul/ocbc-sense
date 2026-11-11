@@ -1,0 +1,1104 @@
+{
+  "info": {
+    "_postman_id": "96d89da9-cd49-44d5-8818-ef4908c85e9a",
+    "name": "Ask, Don't Assume \u2014 Backend",
+    "description": "REST tests and demo for the Ask, Don't Assume backend (OCBC Ignite, PS4).\n\n1. Start the backend and run `node seed.js`.\n2. Set `baseUrl` (default http://localhost:3000).\n3. Run the whole collection with the Runner, or send requests one by one in folder order.\n\nSocket.IO messages (event, handoff:*) can't be saved in a collection file; see postman-guide.md.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Dashboard",
+      "description": "What the console's Insights tab calls. Run after `node seed.js` to see the synthetic data.",
+      "item": [
+        {
+          "name": "Friction per page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/insights/friction",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "insights",
+                "friction"
+              ]
+            },
+            "description": "Counts friction events per page and type. Totals only, never individual sessions."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "const rows = pm.response.json();",
+                  "pm.test(\"Returns an array of { _id: { page, type }, count }\", () => {",
+                  "  pm.expect(rows).to.be.an(\"array\");",
+                  "  rows.forEach(r => { pm.expect(r._id).to.have.keys(\"page\", \"type\"); pm.expect(r._id.type).to.match(/^friction:/); });",
+                  "});",
+                  "pm.test(\"Has data (run node seed.js if this fails)\", () => pm.expect(rows.length).to.be.above(0));",
+                  "const top = rows.slice().sort((a, b) => b.count - a.count)[0];",
+                  "if (top) console.log(\"Most friction:\", top._id.page, top._id.type, top.count);"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Eligibility",
+      "description": "Step 1 of the journey. Nothing is stored: passport country and age are only checked.",
+      "item": [
+        {
+          "name": "Eligible (Hong Kong, 18+)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/eligibility",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "eligibility"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passport_country\": \"HK\",\n  \"is_18_or_older\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"eligible: true\", () => pm.expect(pm.response.json()).to.eql({ eligible: true }));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Not eligible: country not supported",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/eligibility",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "eligibility"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passport_country\": \"SG\",\n  \"is_18_or_older\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"COUNTRY_NOT_SUPPORTED\", () => pm.expect(pm.response.json()).to.eql({ eligible: false, code: \"COUNTRY_NOT_SUPPORTED\" }));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Not eligible: under 18",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/eligibility",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "eligibility"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passport_country\": \"MY\",\n  \"is_18_or_older\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"AGE_REQUIREMENT\", () => pm.expect(pm.response.json()).to.eql({ eligible: false, code: \"AGE_REQUIREMENT\" }));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Journey (run in order)",
+      "description": "One applicant's journey: start, change a setting mid-journey, submit. The session ID is saved to the `session_id` variable automatically.",
+      "item": [
+        {
+          "name": "Start session (tap 'Foreigner with e-passport')",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "Creates one document in `sessions` with source `live` and outcome `in_progress`. Only preferences are sent; the server sets everything else.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": {\n    \"wording\": \"standard\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created\", () => pm.response.to.have.status(201));",
+                  "const id = pm.response.json().session_id;",
+                  "pm.test(\"Returns a session_id\", () => pm.expect(id).to.match(/^s\\d+_\\d+$/));",
+                  "pm.collectionVariables.set(\"session_id\", id);",
+                  "console.log(\"session_id =\", id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Change wording to simple (mode bar)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions/{{session_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions",
+                "{{session_id}}"
+              ]
+            },
+            "description": "Updates `current_preferences`, which the AI answers in. The browser also sends a `wording_change:simple` event over Socket.IO.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"current_preferences\": {\n    \"wording\": \"simple\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"204 No Content\", () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Submit application",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/applications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "applications"
+              ]
+            },
+            "description": "Sets the session's outcome to `submitted`. The reference is shown on screen only, never stored.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{session_id}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created\", () => pm.response.to.have.status(201));",
+                  "pm.test(\"Reference looks like APP-XXXXXX\", () => pm.expect(pm.response.json().reference).to.match(/^APP-[A-Z0-9]{6}$/));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Submit again (rejected)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/applications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "applications"
+              ]
+            },
+            "description": "A session can only be submitted once.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{session_id}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"session_not_active\", () => pm.expect(pm.response.json().error).to.eql(\"session_not_active\"));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. Leaving early",
+      "description": "Other ways a journey ends.",
+      "item": [
+        {
+          "name": "Start another session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "Preferences are optional; `{}` works.",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created\", () => pm.response.to.have.status(201));",
+                  "pm.collectionVariables.set(\"session_id_2\", pm.response.json().session_id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Applicant leaves (abandoned)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions/{{session_id_2}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions",
+                "{{session_id_2}}"
+              ]
+            },
+            "description": "Sets outcome to `abandoned`; the server fills in `ended_at`. Use `not_eligible` when step 1 fails.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"outcome\": \"abandoned\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"204 No Content\", () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "5. Validation (rejected requests)",
+      "description": "Shows the backend refusing bad input.",
+      "item": [
+        {
+          "name": "Unsupported language (Bahasa Indonesia)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "Only en, zh and ms are allowed. Mongoose rejects anything else.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": {\n    \"language\": \"id\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"invalid_data names the field\", () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b.error).to.eql(\"invalid_data\");",
+                  "  pm.expect(b.fields).to.include(\"preferences.language\");",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Set outcome to submitted with PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions/{{session_id_2}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions",
+                "{{session_id_2}}"
+              ]
+            },
+            "description": "`submitted` can only be set by POST /api/applications.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"outcome\": \"submitted\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"bad_outcome\", () => pm.expect(pm.response.json().error).to.eql(\"bad_outcome\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "PATCH a session that doesn't exist",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions/s0_0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions",
+                "s0_0"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"outcome\": \"abandoned\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"404 Not Found\", () => pm.response.to.have.status(404));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Submit a session that doesn't exist",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/applications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "applications"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"s0_0\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"session_not_active\", () => pm.expect(pm.response.json().error).to.eql(\"session_not_active\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Passport country is never stored",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "Extra fields are dropped by the schema. Check in mongosh: the new session has no passport_country or age.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": {\n    \"language\": \"en\"\n  },\n  \"passport_country\": \"MY\",\n  \"age\": 30\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created (extra fields ignored)\", () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "6. AI",
+      "description": "Asks the AI through the backend. Works without the AI service too: you then get the safe fallback.",
+      "item": [
+        {
+          "name": "Start a session in Chinese, simple wording",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": {\n    \"wording\": \"simple\",\n    \"text_size\": \"default\",\n    \"language\": \"zh\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created\", () => pm.response.to.have.status(201));",
+                  "pm.collectionVariables.set(\"session_id_ai\", pm.response.json().session_id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ask a question on step 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/explain",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "explain"
+              ]
+            },
+            "description": "The server adds the step text, verified_info, the last error and the session's language (zh) before calling the AI service. If the AI is down or slow, fallback is true.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{session_id_ai}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"Why won't my passport scan?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test(\"Has type, answer and fallback\", () => {",
+                  "  pm.expect(b).to.have.keys(\"type\", \"answer\", \"fallback\", \"action\", \"value\");",
+                  "  pm.expect(b.fallback).to.be.a(\"boolean\");",
+                  "});",
+                  "console.log(b.fallback ? \"Fallback (is the AI service running?)\" : \"AI answered: \" + b.answer);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Question on a non-journey page (rejected)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/explain",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "explain"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{session_id_ai}}\",\n  \"page_id\": \"welcome\",\n  \"question\": \"Hi\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"unknown_page\", () => pm.expect(pm.response.json().error).to.eql(\"unknown_page\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Empty question (rejected)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/explain",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "explain"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{session_id_ai}}\",\n  \"page_id\": \"account.step3\",\n  \"question\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"400 Bad Request\", () => pm.response.to.have.status(400));",
+                  "pm.test(\"bad_question\", () => pm.expect(pm.response.json().error).to.eql(\"bad_question\"));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "7. Chat",
+      "description": "The chat itself runs over Socket.IO (see postman-guide.md, section 4). This loads a session's saved messages and the hand-off list for the Escalated tab.",
+      "item": [
+        {
+          "name": "Chat transcript for a session",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions/{{session_id}}/messages",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions",
+                "{{session_id}}",
+                "messages"
+              ]
+            },
+            "description": "Empty for a session that never talked to staff. After a chat (test-client.js or the Postman Socket.IO tabs), it lists every message, oldest first, with ID-like numbers shown as [hidden]."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "const msgs = pm.response.json();",
+                  "pm.test(\"Returns an array of messages\", () => pm.expect(msgs).to.be.an(\"array\"));",
+                  "msgs.forEach(m => pm.test(\"No unmasked ID numbers\", () => pm.expect(m.text).not.to.match(/\\b(?=[A-Za-z0-9]*\\d)[A-Za-z0-9]{6,}\\b/)));",
+                  "console.log(msgs.length + \" saved message(s)\");"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Hand-offs (Escalated tab)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/handoffs?limit=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "handoffs"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "What the console's Escalated to Staff Help tab loads: every session that asked for help, one row per session (latest request + count), live sessions first. Status waiting/active/resolved; grouped on screen by outcome."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "const rows = pm.response.json();",
+                  "pm.test(\"One row per session, at most 10\", () => {",
+                  "  pm.expect(rows).to.be.an(\"array\");",
+                  "  pm.expect(rows.length).to.be.at.most(10);",
+                  "  pm.expect(new Set(rows.map(r => r.session_id)).size).to.eql(rows.length);",
+                  "});",
+                  "pm.test(\"Has data (run node seed.js if this fails)\", () => pm.expect(rows.length).to.be.above(0));",
+                  "rows.forEach(r => pm.test(\"Valid row \" + r.session_id, () => {",
+                  "  pm.expect([\"waiting\", \"active\", \"resolved\"]).to.include(r.status);",
+                  "  pm.expect([\"in_progress\", \"submitted\", \"abandoned\", \"not_eligible\"]).to.include(r.outcome);",
+                  "  pm.expect(r).not.to.have.any.keys(\"phone\", \"name\", \"passport_country\");",
+                  "}));",
+                  "console.log(rows.filter(r => r.source === \"live\").length + \" live, \" + rows.filter(r => r.source === \"synthetic\").length + \" demo\");"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "8. Hand-off demo (with Socket.IO)",
+      "description": "Shows: handoff:request \u2192 saved in events \u2192 open queue \u2192 handoff:new (Friction Queue card) \u2192 insights:update \u2192 GET /api/handoffs (row in Pending: Waiting\u2026).\n\n1. Send **Start a session for the demo**.\n2. In a Socket.IO tab, send `join_session` and then `handoff:request` (the exact messages are in the Console, and in postman-guide.md \u00a74.4).\n3. Send **Check: the request reached the Escalated tab**.\n\nRunning the whole collection without step 2 is fine: the check is skipped, not failed.",
+      "item": [
+        {
+          "name": "Start a session for the demo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/sessions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sessions"
+              ]
+            },
+            "description": "Creates the session for the demo and saves it as {{session_id_demo}} (collection and global variable, so you can use it in Socket.IO messages). The Console prints the two Socket.IO messages to send next.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": {\n    \"wording\": \"standard\",\n    \"text_size\": \"large\",\n    \"language\": \"en\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"201 Created\", () => pm.response.to.have.status(201));",
+                  "const id = pm.response.json().session_id;",
+                  "pm.collectionVariables.set(\"session_id_demo\", id);",
+                  "pm.globals.set(\"session_id_demo\", id);   // so Socket.IO tabs can use {{session_id_demo}}",
+                  "console.log(\"join_session:\", JSON.stringify({ session_id: id }));",
+                  "console.log(\"handoff:request:\", JSON.stringify({ session_id: id, page_id: \"account.step3\",",
+                  "  share: { step_no: 3, step_title: \"Scan your passport chip\", last_error: \"NFC_READ_FAILED\", failed_attempts: 2 } }));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Check: the request reached the Escalated tab",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/handoffs?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "handoffs"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "What the Escalated tab loads after insights:update. Finds the demo session's row: status \"waiting\" until someone picks it up, \"active\" after Pick Up Chat, \"resolved\" after Resolve & Close."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 OK\", () => pm.response.to.have.status(200));",
+                  "const id = pm.collectionVariables.get(\"session_id_demo\");",
+                  "const row = pm.response.json().find(r => r.session_id === id);",
+                  "if (!row) {",
+                  "  pm.test.skip(\"Row for \" + id + \" (send handoff:request in the Socket.IO tab first)\", () => {});",
+                  "  console.log(\"No hand-off yet for\", id, \": send handoff:request, then this request again.\");",
+                  "} else {",
+                  "  pm.test(\"1. Saved: the request is in events (one row for this session)\", () => pm.expect(row.handoff_count).to.be.at.least(1));",
+                  "  pm.test(\"Still in progress \u2192 Pending group\", () => pm.expect(row.outcome).to.eql(\"in_progress\"));",
+                  "  pm.test(\"Step shown (step 3, Scan your passport chip)\", () => {",
+                  "    pm.expect(row.step_no).to.eql(3);",
+                  "    pm.expect(row.step_title).to.eql(\"Scan your passport chip\");",
+                  "  });",
+                  "  pm.test(\"Status is waiting, active or resolved\", () => pm.expect([\"waiting\", \"active\", \"resolved\"]).to.include(row.status));",
+                  "  console.log(\"Escalated tab row:\", row.status, \"| step\", row.step_no, row.step_title, \"| error\", row.last_error, \"| live:\", row.source === \"live\");",
+                  "}"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "session_id",
+      "value": ""
+    },
+    {
+      "key": "session_id_2",
+      "value": ""
+    },
+    {
+      "key": "session_id_ai",
+      "value": ""
+    },
+    {
+      "key": "session_id_demo",
+      "value": ""
+    }
+  ]
+}

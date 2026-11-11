@@ -1,0 +1,24 @@
+:root {
+  --red: #CC0000;
+  --red-pressed: #A30000;
+    --red-tint: #FBEFEF;
+  --text: #242424;
+  --text-secondary: #666666;
+  --bg: #F6F6F6;
+  --card: #FFFFFF;
+  --border: #E5E5E5;
+
+  --success: #1B7F4B;
+  --success-bg: #E8F5EE;
+  --error: #A30D0D;
+  --error-bg: #FDEDED;
+  --caution: #8A5A00;
+  --caution-bg: #FFF4DB;
+  --info-bg: #F0F0F0;
+  --guidance: #1A5FB4;
+  --guidance-bg: #E8F1FB;
+
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --space: 8px;
+}

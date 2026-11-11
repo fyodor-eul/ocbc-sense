@@ -1,0 +1,11 @@
+
+.app {
+  min-height: 100vh;
+  background: #f7f8fa;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-content {
+  padding: 0;
+  min-height: calc(100vh - 110px);
+}

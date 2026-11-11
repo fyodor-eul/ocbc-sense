@@ -1,0 +1,48 @@
+
+{
+  "step_id": "account.step1",
+  "title": "Check you're eligible",
+  "screens": [
+    {
+      "screen_id": "eligibility_form",
+      "description": "The customer selects their passport country and enters their date of birth before checking eligibility."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "eligibility_overview",
+      "screen_id": "eligibility_form",
+      "field_id": null,
+      "topic": "Eligibility Check",
+      "content": "This step asks the customer to confirm their passport country and date of birth before continuing with the application."
+    },
+    {
+      "id": "passport_country",
+      "screen_id": "eligibility_form",
+      "field_id": "passport_country",
+      "topic": "Passport Country",
+      "content": "Select the country that issued your passport. This field asks for your passport country, not your current location."
+    },
+    {
+      "id": "date_of_birth",
+      "screen_id": "eligibility_form",
+      "field_id": "date_of_birth",
+      "topic": "Date of Birth",
+      "content": "Enter your date of birth in DD/MM/YYYY format. The eligibility screen states that customers must be 18 or older."
+    },
+    {
+      "id": "check_eligibility_button",
+      "screen_id": "eligibility_form",
+      "field_id": "check_eligibility",
+      "topic": "Check Eligibility Button",
+      "content": "The Check eligibility button is used after providing the requested passport country and date of birth. The application then checks whether the customer can continue."
+    },
+    {
+      "id": "eligibility_requirements",
+      "screen_id": "eligibility_form",
+      "field_id": null,
+      "topic": "Eligibility Requirements",
+      "content": "The prototype asks customers to confirm their passport country and that they are at least 18 years old. The complete list of supported passport countries and other eligibility rules must be verified separately."
+    }
+  ]
+}

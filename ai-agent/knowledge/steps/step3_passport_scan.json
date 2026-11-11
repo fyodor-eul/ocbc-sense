@@ -1,0 +1,121 @@
+{
+  "step_id": "account.step3",
+  "title": "Scan your passport chip",
+  "screens": [
+    {
+      "screen_id": "passport_scan_ready",
+      "description": "The customer prepares to scan their biometric passport chip using an NFC-enabled phone."
+    },
+    {
+      "screen_id": "passport_scanning",
+      "description": "The application reads the passport chip and displays the scanning progress."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "passport_scan_overview",
+      "screen_id": "passport_scan_ready",
+      "field_id": null,
+      "topic": "Passport Chip Scanning",
+      "content": "In Step 3, the customer holds their phone against their passport so the application can read its biometric chip using contactless NFC technology."
+    },
+    {
+      "id": "passport_scan_purpose",
+      "screen_id": null,
+      "field_id": null,
+      "topic": "Why the Passport Chip Is Scanned",
+      "content": "The passport chip holds information that is used as part of the identity verification process. Scanning it helps confirm that the passport is genuine and belongs to the customer."
+    },
+    {
+      "id": "nfc_definition",
+      "screen_id": "passport_scan_ready",
+      "field_id": "nfc",
+      "topic": "What is NFC?",
+      "content": "NFC stands for Near Field Communication. It allows compatible devices to communicate wirelessly over very short distances. The application uses NFC to read the electronic chip inside a biometric passport."
+    },
+    {
+      "id": "passport_position",
+      "screen_id": "passport_scan_ready",
+      "field_id": "passport_position",
+      "topic": "Where to Place the Phone",
+      "content": "The prototype instructs the customer to target the passport back cover or photo page and hold their phone against the passport during scanning."
+    },
+    {
+      "id": "nfc_ready",
+      "screen_id": "passport_scan_ready",
+      "field_id": "nfc_status",
+      "topic": "NFC Ready Status",
+      "content": "The NFC Ready indicator shows that the application is displaying a ready state for NFC scanning. The customer can select Start scan to begin."
+    },
+    {
+      "id": "start_scan",
+      "screen_id": "passport_scan_ready",
+      "field_id": "start_scan",
+      "topic": "Start Scan Button",
+      "content": "The Start scan button begins the passport chip scanning process in the prototype."
+    },
+    {
+      "id": "scanning_overview",
+      "screen_id": "passport_scanning",
+      "field_id": null,
+      "topic": "Reading Your Passport",
+      "content": "The application displays Reading your passport while scanning is in progress. The customer should hold their phone against the passport and keep it still. The screen indicates that this may take a few seconds."
+    },
+    {
+      "id": "scanning_progress",
+      "screen_id": "passport_scanning",
+      "field_id": "scanning_progress",
+      "topic": "Scanning Progress",
+      "content": "The prototype displays scanning progress and status indicators. These include MRZ Document Key decoded, Extracting biometric facial data, and Validating digital signature."
+    },
+    {
+      "id": "mrz_document_key",
+      "screen_id": "passport_scanning",
+      "field_id": "mrz_document_key",
+      "topic": "MRZ Document Key",
+      "content": "MRZ stands for Machine Readable Zone. It refers to the machine-readable information printed on a passport's identity page. Information from this zone can be used to derive a document access key for reading the electronic passport chip."
+    },
+    {
+      "id": "biometric_extraction",
+      "screen_id": "passport_scanning",
+      "field_id": "biometric_extraction",
+      "topic": "Extracting Biometric Facial Data",
+      "content": "The prototype displays an Extracting biometric facial data stage. This represents reading facial biometric information stored in the electronic passport chip. It does not mean that the application has completed identity verification."
+    },
+    {
+      "id": "digital_signature",
+      "screen_id": "passport_scanning",
+      "field_id": "digital_signature",
+      "topic": "Validating Digital Signature",
+      "content": "The prototype includes a digital signature validation stage. Digital signatures are used in electronic passports to help verify that chip data is authentic and has not been altered. The screen does not by itself confirm that the application has been approved."
+    },
+    {
+      "id": "keep_phone_still",
+      "screen_id": "passport_scanning",
+      "field_id": "phone_position",
+      "topic": "Keep Your Phone Still",
+      "content": "During scanning, the screen instructs the customer to keep their phone still because the application is reading information from the passport chip."
+    },
+    {
+      "id": "cancel_scan",
+      "screen_id": "passport_scanning",
+      "field_id": "cancel_scan",
+      "topic": "Cancel Scan Button",
+      "content": "The scanning screen includes a Cancel Scan button. This is intended to stop the current scanning attempt."
+    },
+    {
+      "id": "scan_troubleshooting",
+      "screen_id": "passport_scanning",
+      "field_id": null,
+      "topic": "Passport Scan Not Working",
+      "content": "If scanning is unsuccessful, the customer can try again while holding the phone steady against the passport. If the problem continues, the customer can use Ask Sense to request guidance or ask for human assistance."
+    },
+    {
+      "id": "scan_taking_long",
+      "screen_id": "passport_scanning",
+      "field_id": null,
+      "topic": "Passport Scan Taking Too Long",
+      "content": "The prototype states that passport scanning may take a few seconds. If the scan appears stuck or repeatedly fails, the customer can request assistance rather than assuming that scanning has completed."
+    }
+  ]
+}

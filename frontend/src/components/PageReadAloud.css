@@ -1,0 +1,32 @@
+.page-read-aloud {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+
+.page-read-aloud__button,
+.page-read-aloud__stop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 8px 14px;
+
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.page-read-aloud__button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: inherit;
+}
+
+.page-read-aloud__stop {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: inherit;
+}

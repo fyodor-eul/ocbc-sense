@@ -1,0 +1,5102 @@
+[
+ {
+  "_id": "syn0001",
+  "source": "synthetic",
+  "started_at": "2026-11-01T01:30:39Z",
+  "ended_at": "2026-11-01T01:37:33Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0002",
+  "source": "synthetic",
+  "started_at": "2026-11-01T01:50:03Z",
+  "ended_at": "2026-11-01T02:03:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0003",
+  "source": "synthetic",
+  "started_at": "2026-11-01T02:14:32Z",
+  "ended_at": "2026-11-01T02:19:30Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0004",
+  "source": "synthetic",
+  "started_at": "2026-11-01T02:56:44Z",
+  "ended_at": "2026-11-01T03:02:46Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0005",
+  "source": "synthetic",
+  "started_at": "2026-11-01T05:13:27Z",
+  "ended_at": "2026-11-01T05:28:14Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0006",
+  "source": "synthetic",
+  "started_at": "2026-11-01T07:44:38Z",
+  "ended_at": "2026-11-01T07:51:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0007",
+  "source": "synthetic",
+  "started_at": "2026-11-01T10:05:14Z",
+  "ended_at": "2026-11-01T10:11:28Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0008",
+  "source": "synthetic",
+  "started_at": "2026-11-01T10:14:37Z",
+  "ended_at": "2026-11-01T10:17:38Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0009",
+  "source": "synthetic",
+  "started_at": "2026-11-01T10:31:01Z",
+  "ended_at": "2026-11-01T10:31:49Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0010",
+  "source": "synthetic",
+  "started_at": "2026-11-01T10:45:41Z",
+  "ended_at": "2026-11-01T10:51:00Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0011",
+  "source": "synthetic",
+  "started_at": "2026-11-01T11:07:43Z",
+  "ended_at": "2026-11-01T11:22:34Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0012",
+  "source": "synthetic",
+  "started_at": "2026-11-01T11:08:17Z",
+  "ended_at": "2026-11-01T11:19:15Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0013",
+  "source": "synthetic",
+  "started_at": "2026-11-01T11:15:08Z",
+  "ended_at": "2026-11-01T11:18:03Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0014",
+  "source": "synthetic",
+  "started_at": "2026-11-01T13:48:36Z",
+  "ended_at": "2026-11-01T13:55:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0015",
+  "source": "synthetic",
+  "started_at": "2026-11-01T13:52:31Z",
+  "ended_at": "2026-11-01T13:58:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0016",
+  "source": "synthetic",
+  "started_at": "2026-11-01T13:55:49Z",
+  "ended_at": "2026-11-01T14:01:57Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0017",
+  "source": "synthetic",
+  "started_at": "2026-11-01T14:12:53Z",
+  "ended_at": "2026-11-01T14:31:31Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0018",
+  "source": "synthetic",
+  "started_at": "2026-11-01T14:59:48Z",
+  "ended_at": "2026-11-01T15:11:04Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0019",
+  "source": "synthetic",
+  "started_at": "2026-11-02T02:27:53Z",
+  "ended_at": "2026-11-02T02:33:54Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0020",
+  "source": "synthetic",
+  "started_at": "2026-11-02T04:02:51Z",
+  "ended_at": "2026-11-02T04:10:07Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0021",
+  "source": "synthetic",
+  "started_at": "2026-11-02T04:57:02Z",
+  "ended_at": "2026-11-02T05:01:28Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0022",
+  "source": "synthetic",
+  "started_at": "2026-11-02T05:30:45Z",
+  "ended_at": "2026-11-02T05:38:27Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0023",
+  "source": "synthetic",
+  "started_at": "2026-11-02T05:55:30Z",
+  "ended_at": "2026-11-02T06:02:30Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0024",
+  "source": "synthetic",
+  "started_at": "2026-11-02T05:57:59Z",
+  "ended_at": "2026-11-02T06:03:33Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0025",
+  "source": "synthetic",
+  "started_at": "2026-11-02T06:27:42Z",
+  "ended_at": "2026-11-02T06:37:26Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0026",
+  "source": "synthetic",
+  "started_at": "2026-11-02T10:32:58Z",
+  "ended_at": "2026-11-02T10:39:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0027",
+  "source": "synthetic",
+  "started_at": "2026-11-02T11:00:33Z",
+  "ended_at": "2026-11-02T11:08:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0028",
+  "source": "synthetic",
+  "started_at": "2026-11-02T11:49:18Z",
+  "ended_at": "2026-11-02T11:58:39Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0029",
+  "source": "synthetic",
+  "started_at": "2026-11-02T13:13:43Z",
+  "ended_at": "2026-11-02T13:18:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0030",
+  "source": "synthetic",
+  "started_at": "2026-11-02T15:35:18Z",
+  "ended_at": "2026-11-02T15:40:34Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0031",
+  "source": "synthetic",
+  "started_at": "2026-11-03T00:39:36Z",
+  "ended_at": "2026-11-03T00:48:49Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0032",
+  "source": "synthetic",
+  "started_at": "2026-11-03T01:50:19Z",
+  "ended_at": "2026-11-03T01:56:20Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0033",
+  "source": "synthetic",
+  "started_at": "2026-11-03T04:26:31Z",
+  "ended_at": "2026-11-03T04:32:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0034",
+  "source": "synthetic",
+  "started_at": "2026-11-03T04:43:58Z",
+  "ended_at": "2026-11-03T04:52:53Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0035",
+  "source": "synthetic",
+  "started_at": "2026-11-03T05:28:15Z",
+  "ended_at": "2026-11-03T05:39:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0036",
+  "source": "synthetic",
+  "started_at": "2026-11-03T05:50:54Z",
+  "ended_at": "2026-11-03T06:03:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0037",
+  "source": "synthetic",
+  "started_at": "2026-11-03T08:21:34Z",
+  "ended_at": "2026-11-03T08:26:26Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0038",
+  "source": "synthetic",
+  "started_at": "2026-11-03T08:37:36Z",
+  "ended_at": "2026-11-03T08:44:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0039",
+  "source": "synthetic",
+  "started_at": "2026-11-03T09:16:21Z",
+  "ended_at": "2026-11-03T09:26:21Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0040",
+  "source": "synthetic",
+  "started_at": "2026-11-03T09:56:40Z",
+  "ended_at": "2026-11-03T10:04:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0041",
+  "source": "synthetic",
+  "started_at": "2026-11-03T10:43:03Z",
+  "ended_at": "2026-11-03T10:49:53Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0042",
+  "source": "synthetic",
+  "started_at": "2026-11-03T10:53:40Z",
+  "ended_at": "2026-11-03T10:59:41Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0043",
+  "source": "synthetic",
+  "started_at": "2026-11-03T10:56:27Z",
+  "ended_at": "2026-11-03T11:05:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0044",
+  "source": "synthetic",
+  "started_at": "2026-11-03T11:08:55Z",
+  "ended_at": "2026-11-03T11:09:40Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0045",
+  "source": "synthetic",
+  "started_at": "2026-11-03T11:10:34Z",
+  "ended_at": "2026-11-03T11:17:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0046",
+  "source": "synthetic",
+  "started_at": "2026-11-03T12:41:02Z",
+  "ended_at": "2026-11-03T12:53:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0047",
+  "source": "synthetic",
+  "started_at": "2026-11-03T13:23:18Z",
+  "ended_at": "2026-11-03T13:37:33Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0048",
+  "source": "synthetic",
+  "started_at": "2026-11-03T13:55:06Z",
+  "ended_at": "2026-11-03T14:07:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0049",
+  "source": "synthetic",
+  "started_at": "2026-11-03T15:07:35Z",
+  "ended_at": "2026-11-03T15:17:37Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0050",
+  "source": "synthetic",
+  "started_at": "2026-11-04T00:17:15Z",
+  "ended_at": "2026-11-04T00:23:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0051",
+  "source": "synthetic",
+  "started_at": "2026-11-04T01:13:32Z",
+  "ended_at": "2026-11-04T01:20:38Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0052",
+  "source": "synthetic",
+  "started_at": "2026-11-04T01:34:53Z",
+  "ended_at": "2026-11-04T01:41:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0053",
+  "source": "synthetic",
+  "started_at": "2026-11-04T01:46:21Z",
+  "ended_at": "2026-11-04T01:51:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0054",
+  "source": "synthetic",
+  "started_at": "2026-11-04T02:06:22Z",
+  "ended_at": "2026-11-04T02:16:25Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0055",
+  "source": "synthetic",
+  "started_at": "2026-11-04T03:10:50Z",
+  "ended_at": "2026-11-04T03:16:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0056",
+  "source": "synthetic",
+  "started_at": "2026-11-04T05:04:21Z",
+  "ended_at": "2026-11-04T05:10:41Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0057",
+  "source": "synthetic",
+  "started_at": "2026-11-04T05:12:34Z",
+  "ended_at": "2026-11-04T05:19:01Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0058",
+  "source": "synthetic",
+  "started_at": "2026-11-04T07:02:54Z",
+  "ended_at": "2026-11-04T07:08:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0059",
+  "source": "synthetic",
+  "started_at": "2026-11-04T08:23:40Z",
+  "ended_at": "2026-11-04T08:28:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0060",
+  "source": "synthetic",
+  "started_at": "2026-11-04T08:44:19Z",
+  "ended_at": "2026-11-04T08:50:09Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0061",
+  "source": "synthetic",
+  "started_at": "2026-11-04T09:07:41Z",
+  "ended_at": "2026-11-04T09:13:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0062",
+  "source": "synthetic",
+  "started_at": "2026-11-04T09:51:29Z",
+  "ended_at": "2026-11-04T09:52:14Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0063",
+  "source": "synthetic",
+  "started_at": "2026-11-04T10:22:46Z",
+  "ended_at": "2026-11-04T10:32:07Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0064",
+  "source": "synthetic",
+  "started_at": "2026-11-04T10:59:19Z",
+  "ended_at": "2026-11-04T11:06:45Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0065",
+  "source": "synthetic",
+  "started_at": "2026-11-04T11:22:27Z",
+  "ended_at": "2026-11-04T11:31:38Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0066",
+  "source": "synthetic",
+  "started_at": "2026-11-04T12:10:19Z",
+  "ended_at": "2026-11-04T12:23:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0067",
+  "source": "synthetic",
+  "started_at": "2026-11-04T12:14:11Z",
+  "ended_at": "2026-11-04T12:19:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0068",
+  "source": "synthetic",
+  "started_at": "2026-11-04T12:19:32Z",
+  "ended_at": "2026-11-04T12:24:39Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0069",
+  "source": "synthetic",
+  "started_at": "2026-11-04T12:36:50Z",
+  "ended_at": "2026-11-04T12:46:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0070",
+  "source": "synthetic",
+  "started_at": "2026-11-04T13:25:31Z",
+  "ended_at": "2026-11-04T13:32:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0071",
+  "source": "synthetic",
+  "started_at": "2026-11-04T13:28:06Z",
+  "ended_at": "2026-11-04T13:41:56Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0072",
+  "source": "synthetic",
+  "started_at": "2026-11-04T13:36:18Z",
+  "ended_at": "2026-11-04T13:43:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0073",
+  "source": "synthetic",
+  "started_at": "2026-11-04T14:13:40Z",
+  "ended_at": "2026-11-04T14:19:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0074",
+  "source": "synthetic",
+  "started_at": "2026-11-04T14:56:53Z",
+  "ended_at": "2026-11-04T15:02:42Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0075",
+  "source": "synthetic",
+  "started_at": "2026-11-05T03:30:35Z",
+  "ended_at": "2026-11-05T03:45:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0076",
+  "source": "synthetic",
+  "started_at": "2026-11-05T03:36:19Z",
+  "ended_at": "2026-11-05T03:42:04Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0077",
+  "source": "synthetic",
+  "started_at": "2026-11-05T04:48:21Z",
+  "ended_at": "2026-11-05T04:54:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0078",
+  "source": "synthetic",
+  "started_at": "2026-11-05T05:56:06Z",
+  "ended_at": "2026-11-05T06:06:35Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0079",
+  "source": "synthetic",
+  "started_at": "2026-11-05T08:41:09Z",
+  "ended_at": "2026-11-05T08:47:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0080",
+  "source": "synthetic",
+  "started_at": "2026-11-05T09:02:08Z",
+  "ended_at": "2026-11-05T09:03:59Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0081",
+  "source": "synthetic",
+  "started_at": "2026-11-05T09:45:18Z",
+  "ended_at": "2026-11-05T09:53:14Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0082",
+  "source": "synthetic",
+  "started_at": "2026-11-05T10:53:23Z",
+  "ended_at": "2026-11-05T10:59:57Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0083",
+  "source": "synthetic",
+  "started_at": "2026-11-05T11:16:10Z",
+  "ended_at": "2026-11-05T11:21:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0084",
+  "source": "synthetic",
+  "started_at": "2026-11-05T11:48:31Z",
+  "ended_at": "2026-11-05T11:56:43Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0085",
+  "source": "synthetic",
+  "started_at": "2026-11-05T13:52:09Z",
+  "ended_at": "2026-11-05T14:02:03Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0086",
+  "source": "synthetic",
+  "started_at": "2026-11-05T14:15:55Z",
+  "ended_at": "2026-11-05T14:25:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0087",
+  "source": "synthetic",
+  "started_at": "2026-11-05T15:34:01Z",
+  "ended_at": "2026-11-05T15:44:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0088",
+  "source": "synthetic",
+  "started_at": "2026-11-06T01:04:43Z",
+  "ended_at": "2026-11-06T01:13:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0089",
+  "source": "synthetic",
+  "started_at": "2026-11-06T04:05:39Z",
+  "ended_at": "2026-11-06T04:16:01Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0090",
+  "source": "synthetic",
+  "started_at": "2026-11-06T04:47:30Z",
+  "ended_at": "2026-11-06T04:53:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0091",
+  "source": "synthetic",
+  "started_at": "2026-11-06T05:55:38Z",
+  "ended_at": "2026-11-06T06:09:35Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0092",
+  "source": "synthetic",
+  "started_at": "2026-11-06T06:44:31Z",
+  "ended_at": "2026-11-06T06:50:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0093",
+  "source": "synthetic",
+  "started_at": "2026-11-06T07:24:16Z",
+  "ended_at": "2026-11-06T07:28:45Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0094",
+  "source": "synthetic",
+  "started_at": "2026-11-06T08:34:45Z",
+  "ended_at": "2026-11-06T08:37:18Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0095",
+  "source": "synthetic",
+  "started_at": "2026-11-06T09:22:51Z",
+  "ended_at": "2026-11-06T09:32:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0096",
+  "source": "synthetic",
+  "started_at": "2026-11-06T09:41:28Z",
+  "ended_at": "2026-11-06T09:50:19Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0097",
+  "source": "synthetic",
+  "started_at": "2026-11-06T10:47:45Z",
+  "ended_at": "2026-11-06T10:58:19Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0098",
+  "source": "synthetic",
+  "started_at": "2026-11-06T11:18:32Z",
+  "ended_at": "2026-11-06T11:19:19Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0099",
+  "source": "synthetic",
+  "started_at": "2026-11-06T11:21:17Z",
+  "ended_at": "2026-11-06T11:27:29Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0100",
+  "source": "synthetic",
+  "started_at": "2026-11-06T15:51:11Z",
+  "ended_at": "2026-11-06T15:52:10Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0101",
+  "source": "synthetic",
+  "started_at": "2026-11-07T02:44:53Z",
+  "ended_at": "2026-11-07T02:54:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0102",
+  "source": "synthetic",
+  "started_at": "2026-11-07T03:48:10Z",
+  "ended_at": "2026-11-07T03:58:03Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0103",
+  "source": "synthetic",
+  "started_at": "2026-11-07T05:03:37Z",
+  "ended_at": "2026-11-07T05:15:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0104",
+  "source": "synthetic",
+  "started_at": "2026-11-07T05:05:10Z",
+  "ended_at": "2026-11-07T05:10:07Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0105",
+  "source": "synthetic",
+  "started_at": "2026-11-07T05:47:34Z",
+  "ended_at": "2026-11-07T05:57:29Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0106",
+  "source": "synthetic",
+  "started_at": "2026-11-07T07:04:42Z",
+  "ended_at": "2026-11-07T07:13:21Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0107",
+  "source": "synthetic",
+  "started_at": "2026-11-07T12:13:43Z",
+  "ended_at": "2026-11-07T12:20:56Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0108",
+  "source": "synthetic",
+  "started_at": "2026-11-07T12:25:42Z",
+  "ended_at": "2026-11-07T12:33:09Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0109",
+  "source": "synthetic",
+  "started_at": "2026-11-07T13:57:03Z",
+  "ended_at": "2026-11-07T14:03:11Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0110",
+  "source": "synthetic",
+  "started_at": "2026-11-07T15:15:36Z",
+  "ended_at": "2026-11-07T15:26:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0111",
+  "source": "synthetic",
+  "started_at": "2026-11-08T00:45:40Z",
+  "ended_at": "2026-11-08T00:52:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0112",
+  "source": "synthetic",
+  "started_at": "2026-11-08T02:49:19Z",
+  "ended_at": "2026-11-08T02:54:34Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0113",
+  "source": "synthetic",
+  "started_at": "2026-11-08T03:06:43Z",
+  "ended_at": "2026-11-08T03:13:53Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0114",
+  "source": "synthetic",
+  "started_at": "2026-11-08T03:24:17Z",
+  "ended_at": "2026-11-08T03:36:49Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0115",
+  "source": "synthetic",
+  "started_at": "2026-11-08T03:31:30Z",
+  "ended_at": "2026-11-08T03:39:10Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0116",
+  "source": "synthetic",
+  "started_at": "2026-11-08T04:04:10Z",
+  "ended_at": "2026-11-08T04:10:29Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0117",
+  "source": "synthetic",
+  "started_at": "2026-11-08T04:42:12Z",
+  "ended_at": "2026-11-08T04:48:52Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0118",
+  "source": "synthetic",
+  "started_at": "2026-11-08T05:04:45Z",
+  "ended_at": "2026-11-08T05:05:28Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0119",
+  "source": "synthetic",
+  "started_at": "2026-11-08T05:50:44Z",
+  "ended_at": "2026-11-08T05:56:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0120",
+  "source": "synthetic",
+  "started_at": "2026-11-08T07:56:36Z",
+  "ended_at": "2026-11-08T08:03:01Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0121",
+  "source": "synthetic",
+  "started_at": "2026-11-08T09:17:27Z",
+  "ended_at": "2026-11-08T09:28:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0122",
+  "source": "synthetic",
+  "started_at": "2026-11-08T10:02:39Z",
+  "ended_at": "2026-11-08T10:14:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0123",
+  "source": "synthetic",
+  "started_at": "2026-11-08T10:36:43Z",
+  "ended_at": "2026-11-08T10:41:31Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0124",
+  "source": "synthetic",
+  "started_at": "2026-11-08T11:19:35Z",
+  "ended_at": "2026-11-08T11:25:05Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0125",
+  "source": "synthetic",
+  "started_at": "2026-11-08T11:22:49Z",
+  "ended_at": "2026-11-08T11:30:37Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0126",
+  "source": "synthetic",
+  "started_at": "2026-11-08T12:24:28Z",
+  "ended_at": "2026-11-08T12:27:49Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0127",
+  "source": "synthetic",
+  "started_at": "2026-11-08T14:50:50Z",
+  "ended_at": "2026-11-08T15:01:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0128",
+  "source": "synthetic",
+  "started_at": "2026-11-08T14:53:55Z",
+  "ended_at": "2026-11-08T14:58:00Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0129",
+  "source": "synthetic",
+  "started_at": "2026-11-08T15:08:32Z",
+  "ended_at": null,
+  "outcome": "in_progress",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0130",
+  "source": "synthetic",
+  "started_at": "2026-11-09T01:21:49Z",
+  "ended_at": "2026-11-09T01:34:31Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0131",
+  "source": "synthetic",
+  "started_at": "2026-11-09T03:22:56Z",
+  "ended_at": "2026-11-09T03:27:44Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0132",
+  "source": "synthetic",
+  "started_at": "2026-11-09T04:16:02Z",
+  "ended_at": "2026-11-09T04:21:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0133",
+  "source": "synthetic",
+  "started_at": "2026-11-09T04:37:27Z",
+  "ended_at": "2026-11-09T04:43:26Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0134",
+  "source": "synthetic",
+  "started_at": "2026-11-09T05:14:07Z",
+  "ended_at": "2026-11-09T05:23:43Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0135",
+  "source": "synthetic",
+  "started_at": "2026-11-09T06:32:25Z",
+  "ended_at": "2026-11-09T06:37:57Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0136",
+  "source": "synthetic",
+  "started_at": "2026-11-09T06:49:25Z",
+  "ended_at": "2026-11-09T06:58:39Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0137",
+  "source": "synthetic",
+  "started_at": "2026-11-09T06:56:38Z",
+  "ended_at": "2026-11-09T07:01:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0138",
+  "source": "synthetic",
+  "started_at": "2026-11-09T09:16:57Z",
+  "ended_at": "2026-11-09T09:20:09Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0139",
+  "source": "synthetic",
+  "started_at": "2026-11-09T09:31:28Z",
+  "ended_at": "2026-11-09T09:42:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0140",
+  "source": "synthetic",
+  "started_at": "2026-11-09T10:33:12Z",
+  "ended_at": "2026-11-09T10:42:31Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0141",
+  "source": "synthetic",
+  "started_at": "2026-11-09T10:48:48Z",
+  "ended_at": "2026-11-09T10:53:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0142",
+  "source": "synthetic",
+  "started_at": "2026-11-09T11:43:41Z",
+  "ended_at": "2026-11-09T11:53:49Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0143",
+  "source": "synthetic",
+  "started_at": "2026-11-09T12:00:48Z",
+  "ended_at": "2026-11-09T12:11:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0144",
+  "source": "synthetic",
+  "started_at": "2026-11-09T12:33:31Z",
+  "ended_at": "2026-11-09T12:40:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0145",
+  "source": "synthetic",
+  "started_at": "2026-11-09T12:48:33Z",
+  "ended_at": null,
+  "outcome": "in_progress",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0146",
+  "source": "synthetic",
+  "started_at": "2026-11-09T13:18:46Z",
+  "ended_at": "2026-11-09T13:33:28Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0147",
+  "source": "synthetic",
+  "started_at": "2026-11-09T13:30:01Z",
+  "ended_at": "2026-11-09T13:38:41Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0148",
+  "source": "synthetic",
+  "started_at": "2026-11-09T15:48:11Z",
+  "ended_at": "2026-11-09T15:57:45Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0149",
+  "source": "synthetic",
+  "started_at": "2026-11-10T04:11:19Z",
+  "ended_at": "2026-11-10T04:17:21Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0150",
+  "source": "synthetic",
+  "started_at": "2026-11-10T04:12:09Z",
+  "ended_at": "2026-11-10T04:21:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0151",
+  "source": "synthetic",
+  "started_at": "2026-11-10T04:15:56Z",
+  "ended_at": "2026-11-10T04:21:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0152",
+  "source": "synthetic",
+  "started_at": "2026-11-10T04:21:20Z",
+  "ended_at": "2026-11-10T04:27:53Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0153",
+  "source": "synthetic",
+  "started_at": "2026-11-10T04:44:15Z",
+  "ended_at": "2026-11-10T04:56:25Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0154",
+  "source": "synthetic",
+  "started_at": "2026-11-10T06:27:09Z",
+  "ended_at": "2026-11-10T06:33:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0155",
+  "source": "synthetic",
+  "started_at": "2026-11-10T09:59:48Z",
+  "ended_at": "2026-11-10T10:06:56Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0156",
+  "source": "synthetic",
+  "started_at": "2026-11-10T10:03:39Z",
+  "ended_at": null,
+  "outcome": "in_progress",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0157",
+  "source": "synthetic",
+  "started_at": "2026-11-10T10:12:26Z",
+  "ended_at": "2026-11-10T10:19:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0158",
+  "source": "synthetic",
+  "started_at": "2026-11-10T11:20:25Z",
+  "ended_at": "2026-11-10T11:27:39Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0159",
+  "source": "synthetic",
+  "started_at": "2026-11-10T11:23:30Z",
+  "ended_at": "2026-11-10T11:24:31Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0160",
+  "source": "synthetic",
+  "started_at": "2026-11-10T11:25:52Z",
+  "ended_at": "2026-11-10T11:34:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0161",
+  "source": "synthetic",
+  "started_at": "2026-11-10T11:29:04Z",
+  "ended_at": "2026-11-10T11:39:54Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0162",
+  "source": "synthetic",
+  "started_at": "2026-11-10T11:51:41Z",
+  "ended_at": "2026-11-10T12:02:09Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0163",
+  "source": "synthetic",
+  "started_at": "2026-11-10T13:32:38Z",
+  "ended_at": "2026-11-10T13:39:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0164",
+  "source": "synthetic",
+  "started_at": "2026-11-10T13:37:42Z",
+  "ended_at": "2026-11-10T13:42:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0165",
+  "source": "synthetic",
+  "started_at": "2026-11-10T14:06:56Z",
+  "ended_at": "2026-11-10T14:11:21Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0166",
+  "source": "synthetic",
+  "started_at": "2026-11-10T15:47:05Z",
+  "ended_at": "2026-11-10T15:53:04Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0167",
+  "source": "synthetic",
+  "started_at": "2026-11-10T15:53:12Z",
+  "ended_at": "2026-11-10T16:01:42Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0168",
+  "source": "synthetic",
+  "started_at": "2026-11-11T00:54:20Z",
+  "ended_at": "2026-11-11T00:58:50Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0169",
+  "source": "synthetic",
+  "started_at": "2026-11-11T01:15:17Z",
+  "ended_at": "2026-11-11T01:25:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0170",
+  "source": "synthetic",
+  "started_at": "2026-11-11T02:27:10Z",
+  "ended_at": "2026-11-11T02:40:32Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0171",
+  "source": "synthetic",
+  "started_at": "2026-11-11T02:48:15Z",
+  "ended_at": "2026-11-11T02:58:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0172",
+  "source": "synthetic",
+  "started_at": "2026-11-11T04:20:21Z",
+  "ended_at": "2026-11-11T04:24:04Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0173",
+  "source": "synthetic",
+  "started_at": "2026-11-11T04:25:08Z",
+  "ended_at": "2026-11-11T04:36:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0174",
+  "source": "synthetic",
+  "started_at": "2026-11-11T07:04:13Z",
+  "ended_at": "2026-11-11T07:21:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0175",
+  "source": "synthetic",
+  "started_at": "2026-11-11T08:32:07Z",
+  "ended_at": "2026-11-11T08:43:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0176",
+  "source": "synthetic",
+  "started_at": "2026-11-11T10:01:05Z",
+  "ended_at": "2026-11-11T10:06:41Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0177",
+  "source": "synthetic",
+  "started_at": "2026-11-11T11:42:54Z",
+  "ended_at": "2026-11-11T11:54:01Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0178",
+  "source": "synthetic",
+  "started_at": "2026-11-11T12:26:51Z",
+  "ended_at": "2026-11-11T12:33:53Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0179",
+  "source": "synthetic",
+  "started_at": "2026-11-12T01:41:21Z",
+  "ended_at": "2026-11-12T01:46:50Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0180",
+  "source": "synthetic",
+  "started_at": "2026-11-12T03:22:13Z",
+  "ended_at": "2026-11-12T03:27:11Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0181",
+  "source": "synthetic",
+  "started_at": "2026-11-12T08:33:28Z",
+  "ended_at": "2026-11-12T08:40:59Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0182",
+  "source": "synthetic",
+  "started_at": "2026-11-12T10:45:04Z",
+  "ended_at": "2026-11-12T10:52:01Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0183",
+  "source": "synthetic",
+  "started_at": "2026-11-12T10:51:02Z",
+  "ended_at": "2026-11-12T10:58:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0184",
+  "source": "synthetic",
+  "started_at": "2026-11-13T04:49:26Z",
+  "ended_at": "2026-11-13T04:54:38Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0185",
+  "source": "synthetic",
+  "started_at": "2026-11-13T05:40:53Z",
+  "ended_at": "2026-11-13T05:46:44Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0186",
+  "source": "synthetic",
+  "started_at": "2026-11-13T05:53:26Z",
+  "ended_at": "2026-11-13T06:00:44Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0187",
+  "source": "synthetic",
+  "started_at": "2026-11-13T06:55:04Z",
+  "ended_at": "2026-11-13T06:57:02Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0188",
+  "source": "synthetic",
+  "started_at": "2026-11-13T07:42:50Z",
+  "ended_at": "2026-11-13T07:48:44Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0189",
+  "source": "synthetic",
+  "started_at": "2026-11-13T09:22:19Z",
+  "ended_at": "2026-11-13T09:27:05Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0190",
+  "source": "synthetic",
+  "started_at": "2026-11-13T10:42:01Z",
+  "ended_at": "2026-11-13T10:51:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0191",
+  "source": "synthetic",
+  "started_at": "2026-11-13T11:15:31Z",
+  "ended_at": "2026-11-13T11:22:57Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0192",
+  "source": "synthetic",
+  "started_at": "2026-11-13T11:45:13Z",
+  "ended_at": "2026-11-13T11:54:20Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0193",
+  "source": "synthetic",
+  "started_at": "2026-11-13T11:54:21Z",
+  "ended_at": "2026-11-13T12:01:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0194",
+  "source": "synthetic",
+  "started_at": "2026-11-13T11:57:11Z",
+  "ended_at": "2026-11-13T12:04:45Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0195",
+  "source": "synthetic",
+  "started_at": "2026-11-13T12:53:29Z",
+  "ended_at": "2026-11-13T12:57:54Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0196",
+  "source": "synthetic",
+  "started_at": "2026-11-13T13:12:16Z",
+  "ended_at": "2026-11-13T13:19:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0197",
+  "source": "synthetic",
+  "started_at": "2026-11-13T13:53:26Z",
+  "ended_at": "2026-11-13T13:59:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0198",
+  "source": "synthetic",
+  "started_at": "2026-11-14T00:47:59Z",
+  "ended_at": "2026-11-14T00:48:43Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0199",
+  "source": "synthetic",
+  "started_at": "2026-11-14T02:14:41Z",
+  "ended_at": "2026-11-14T02:20:00Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0200",
+  "source": "synthetic",
+  "started_at": "2026-11-14T06:42:06Z",
+  "ended_at": "2026-11-14T06:51:31Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0201",
+  "source": "synthetic",
+  "started_at": "2026-11-14T06:50:32Z",
+  "ended_at": "2026-11-14T06:54:40Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0202",
+  "source": "synthetic",
+  "started_at": "2026-11-14T07:49:37Z",
+  "ended_at": "2026-11-14T07:56:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0203",
+  "source": "synthetic",
+  "started_at": "2026-11-14T09:46:03Z",
+  "ended_at": "2026-11-14T09:51:49Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0204",
+  "source": "synthetic",
+  "started_at": "2026-11-14T10:24:24Z",
+  "ended_at": "2026-11-14T10:30:49Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0205",
+  "source": "synthetic",
+  "started_at": "2026-11-14T11:50:39Z",
+  "ended_at": "2026-11-14T11:59:03Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0206",
+  "source": "synthetic",
+  "started_at": "2026-11-14T13:25:23Z",
+  "ended_at": "2026-11-14T13:31:49Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0207",
+  "source": "synthetic",
+  "started_at": "2026-11-14T14:59:34Z",
+  "ended_at": "2026-11-14T15:07:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0208",
+  "source": "synthetic",
+  "started_at": "2026-11-14T15:48:40Z",
+  "ended_at": "2026-11-14T15:59:28Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0209",
+  "source": "synthetic",
+  "started_at": "2026-11-15T00:46:56Z",
+  "ended_at": "2026-11-15T00:53:10Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0210",
+  "source": "synthetic",
+  "started_at": "2026-11-15T03:08:15Z",
+  "ended_at": "2026-11-15T03:14:10Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0211",
+  "source": "synthetic",
+  "started_at": "2026-11-15T03:11:17Z",
+  "ended_at": "2026-11-15T03:18:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0212",
+  "source": "synthetic",
+  "started_at": "2026-11-15T04:16:24Z",
+  "ended_at": "2026-11-15T04:18:57Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0213",
+  "source": "synthetic",
+  "started_at": "2026-11-15T05:37:27Z",
+  "ended_at": "2026-11-15T05:44:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0214",
+  "source": "synthetic",
+  "started_at": "2026-11-15T05:44:46Z",
+  "ended_at": "2026-11-15T05:52:21Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0215",
+  "source": "synthetic",
+  "started_at": "2026-11-15T05:59:04Z",
+  "ended_at": "2026-11-15T06:04:42Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0216",
+  "source": "synthetic",
+  "started_at": "2026-11-15T06:52:50Z",
+  "ended_at": "2026-11-15T07:01:16Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0217",
+  "source": "synthetic",
+  "started_at": "2026-11-15T08:13:32Z",
+  "ended_at": "2026-11-15T08:19:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0218",
+  "source": "synthetic",
+  "started_at": "2026-11-15T08:13:53Z",
+  "ended_at": "2026-11-15T08:14:39Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0219",
+  "source": "synthetic",
+  "started_at": "2026-11-15T10:27:35Z",
+  "ended_at": "2026-11-15T10:33:25Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0220",
+  "source": "synthetic",
+  "started_at": "2026-11-15T10:35:55Z",
+  "ended_at": "2026-11-15T10:43:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0221",
+  "source": "synthetic",
+  "started_at": "2026-11-15T10:42:24Z",
+  "ended_at": "2026-11-15T10:49:55Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0222",
+  "source": "synthetic",
+  "started_at": "2026-11-15T10:59:24Z",
+  "ended_at": "2026-11-15T11:03:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0223",
+  "source": "synthetic",
+  "started_at": "2026-11-15T11:27:11Z",
+  "ended_at": "2026-11-15T11:33:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0224",
+  "source": "synthetic",
+  "started_at": "2026-11-15T11:44:25Z",
+  "ended_at": "2026-11-15T11:54:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0225",
+  "source": "synthetic",
+  "started_at": "2026-11-15T11:46:57Z",
+  "ended_at": "2026-11-15T11:51:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0226",
+  "source": "synthetic",
+  "started_at": "2026-11-15T11:49:23Z",
+  "ended_at": "2026-11-15T11:56:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0227",
+  "source": "synthetic",
+  "started_at": "2026-11-15T12:13:17Z",
+  "ended_at": "2026-11-15T12:23:14Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0228",
+  "source": "synthetic",
+  "started_at": "2026-11-15T12:54:35Z",
+  "ended_at": "2026-11-15T12:59:39Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0229",
+  "source": "synthetic",
+  "started_at": "2026-11-15T13:47:55Z",
+  "ended_at": "2026-11-15T13:54:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0230",
+  "source": "synthetic",
+  "started_at": "2026-11-16T00:21:42Z",
+  "ended_at": "2026-11-16T00:33:02Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0231",
+  "source": "synthetic",
+  "started_at": "2026-11-16T02:03:55Z",
+  "ended_at": "2026-11-16T02:09:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0232",
+  "source": "synthetic",
+  "started_at": "2026-11-16T03:40:38Z",
+  "ended_at": "2026-11-16T03:50:42Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0233",
+  "source": "synthetic",
+  "started_at": "2026-11-16T04:08:46Z",
+  "ended_at": "2026-11-16T04:18:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0234",
+  "source": "synthetic",
+  "started_at": "2026-11-16T04:52:58Z",
+  "ended_at": "2026-11-16T05:03:07Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0235",
+  "source": "synthetic",
+  "started_at": "2026-11-16T05:14:18Z",
+  "ended_at": "2026-11-16T05:24:42Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0236",
+  "source": "synthetic",
+  "started_at": "2026-11-16T06:35:48Z",
+  "ended_at": "2026-11-16T06:43:34Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0237",
+  "source": "synthetic",
+  "started_at": "2026-11-16T07:09:41Z",
+  "ended_at": "2026-11-16T07:17:50Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0238",
+  "source": "synthetic",
+  "started_at": "2026-11-16T07:58:41Z",
+  "ended_at": "2026-11-16T08:09:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0239",
+  "source": "synthetic",
+  "started_at": "2026-11-16T08:01:05Z",
+  "ended_at": "2026-11-16T08:12:15Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0240",
+  "source": "synthetic",
+  "started_at": "2026-11-16T08:48:15Z",
+  "ended_at": "2026-11-16T09:00:06Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0241",
+  "source": "synthetic",
+  "started_at": "2026-11-16T09:21:11Z",
+  "ended_at": "2026-11-16T09:24:14Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0242",
+  "source": "synthetic",
+  "started_at": "2026-11-16T11:36:13Z",
+  "ended_at": "2026-11-16T11:36:56Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0243",
+  "source": "synthetic",
+  "started_at": "2026-11-16T12:12:06Z",
+  "ended_at": "2026-11-16T12:17:46Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0244",
+  "source": "synthetic",
+  "started_at": "2026-11-16T12:48:34Z",
+  "ended_at": "2026-11-16T13:00:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0245",
+  "source": "synthetic",
+  "started_at": "2026-11-16T12:50:47Z",
+  "ended_at": "2026-11-16T12:57:34Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0246",
+  "source": "synthetic",
+  "started_at": "2026-11-16T13:02:39Z",
+  "ended_at": "2026-11-16T13:09:36Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0247",
+  "source": "synthetic",
+  "started_at": "2026-11-16T13:28:34Z",
+  "ended_at": "2026-11-16T13:37:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0248",
+  "source": "synthetic",
+  "started_at": "2026-11-16T14:30:22Z",
+  "ended_at": "2026-11-16T14:37:11Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0249",
+  "source": "synthetic",
+  "started_at": "2026-11-16T15:15:29Z",
+  "ended_at": "2026-11-16T15:21:36Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0250",
+  "source": "synthetic",
+  "started_at": "2026-11-17T00:52:35Z",
+  "ended_at": "2026-11-17T01:01:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0251",
+  "source": "synthetic",
+  "started_at": "2026-11-17T03:32:05Z",
+  "ended_at": "2026-11-17T03:35:39Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0252",
+  "source": "synthetic",
+  "started_at": "2026-11-17T05:16:13Z",
+  "ended_at": "2026-11-17T05:28:41Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0253",
+  "source": "synthetic",
+  "started_at": "2026-11-17T06:48:31Z",
+  "ended_at": "2026-11-17T06:53:14Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0254",
+  "source": "synthetic",
+  "started_at": "2026-11-17T08:58:35Z",
+  "ended_at": "2026-11-17T09:04:43Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0255",
+  "source": "synthetic",
+  "started_at": "2026-11-17T09:35:15Z",
+  "ended_at": null,
+  "outcome": "in_progress",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0256",
+  "source": "synthetic",
+  "started_at": "2026-11-17T11:26:53Z",
+  "ended_at": "2026-11-17T11:32:55Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0257",
+  "source": "synthetic",
+  "started_at": "2026-11-17T12:08:55Z",
+  "ended_at": "2026-11-17T12:14:52Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0258",
+  "source": "synthetic",
+  "started_at": "2026-11-17T13:00:42Z",
+  "ended_at": null,
+  "outcome": "in_progress",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0259",
+  "source": "synthetic",
+  "started_at": "2026-11-17T14:00:46Z",
+  "ended_at": "2026-11-17T14:10:28Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0260",
+  "source": "synthetic",
+  "started_at": "2026-11-17T14:17:39Z",
+  "ended_at": "2026-11-17T14:29:28Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0261",
+  "source": "synthetic",
+  "started_at": "2026-11-17T14:21:55Z",
+  "ended_at": "2026-11-17T14:31:40Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0262",
+  "source": "synthetic",
+  "started_at": "2026-11-17T14:55:40Z",
+  "ended_at": "2026-11-17T15:05:07Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0263",
+  "source": "synthetic",
+  "started_at": "2026-11-17T15:38:20Z",
+  "ended_at": "2026-11-17T15:43:50Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0264",
+  "source": "synthetic",
+  "started_at": "2026-11-18T01:05:20Z",
+  "ended_at": "2026-11-18T01:13:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0265",
+  "source": "synthetic",
+  "started_at": "2026-11-18T01:20:03Z",
+  "ended_at": "2026-11-18T01:24:07Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0266",
+  "source": "synthetic",
+  "started_at": "2026-11-18T01:22:14Z",
+  "ended_at": "2026-11-18T01:32:26Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0267",
+  "source": "synthetic",
+  "started_at": "2026-11-18T02:09:14Z",
+  "ended_at": "2026-11-18T02:14:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0268",
+  "source": "synthetic",
+  "started_at": "2026-11-18T02:27:02Z",
+  "ended_at": "2026-11-18T02:34:47Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0269",
+  "source": "synthetic",
+  "started_at": "2026-11-18T03:12:58Z",
+  "ended_at": "2026-11-18T03:26:00Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0270",
+  "source": "synthetic",
+  "started_at": "2026-11-18T03:18:28Z",
+  "ended_at": "2026-11-18T03:24:12Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0271",
+  "source": "synthetic",
+  "started_at": "2026-11-18T03:18:38Z",
+  "ended_at": "2026-11-18T03:23:18Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0272",
+  "source": "synthetic",
+  "started_at": "2026-11-18T04:20:53Z",
+  "ended_at": "2026-11-18T04:25:10Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0273",
+  "source": "synthetic",
+  "started_at": "2026-11-18T06:01:07Z",
+  "ended_at": "2026-11-18T06:07:34Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0274",
+  "source": "synthetic",
+  "started_at": "2026-11-18T06:44:29Z",
+  "ended_at": "2026-11-18T06:59:43Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0275",
+  "source": "synthetic",
+  "started_at": "2026-11-18T07:20:40Z",
+  "ended_at": "2026-11-18T07:25:24Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0276",
+  "source": "synthetic",
+  "started_at": "2026-11-18T07:59:20Z",
+  "ended_at": "2026-11-18T08:06:58Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0277",
+  "source": "synthetic",
+  "started_at": "2026-11-18T08:28:37Z",
+  "ended_at": "2026-11-18T08:32:05Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0278",
+  "source": "synthetic",
+  "started_at": "2026-11-18T09:03:12Z",
+  "ended_at": "2026-11-18T09:08:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0279",
+  "source": "synthetic",
+  "started_at": "2026-11-18T10:27:47Z",
+  "ended_at": "2026-11-18T10:33:47Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0280",
+  "source": "synthetic",
+  "started_at": "2026-11-18T10:47:37Z",
+  "ended_at": "2026-11-18T10:52:22Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0281",
+  "source": "synthetic",
+  "started_at": "2026-11-18T11:31:09Z",
+  "ended_at": "2026-11-18T11:35:15Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0282",
+  "source": "synthetic",
+  "started_at": "2026-11-18T11:47:47Z",
+  "ended_at": "2026-11-18T11:54:51Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "xlarge",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0283",
+  "source": "synthetic",
+  "started_at": "2026-11-18T12:29:27Z",
+  "ended_at": "2026-11-18T12:33:32Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0284",
+  "source": "synthetic",
+  "started_at": "2026-11-18T12:34:51Z",
+  "ended_at": "2026-11-18T12:41:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0285",
+  "source": "synthetic",
+  "started_at": "2026-11-18T12:44:30Z",
+  "ended_at": "2026-11-18T12:52:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0286",
+  "source": "synthetic",
+  "started_at": "2026-11-18T12:49:41Z",
+  "ended_at": "2026-11-18T12:54:14Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0287",
+  "source": "synthetic",
+  "started_at": "2026-11-18T13:26:39Z",
+  "ended_at": "2026-11-18T13:36:08Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0288",
+  "source": "synthetic",
+  "started_at": "2026-11-18T14:59:33Z",
+  "ended_at": "2026-11-18T15:06:11Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0289",
+  "source": "synthetic",
+  "started_at": "2026-11-19T04:44:24Z",
+  "ended_at": "2026-11-19T04:50:21Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0290",
+  "source": "synthetic",
+  "started_at": "2026-11-19T05:35:53Z",
+  "ended_at": "2026-11-19T05:41:46Z",
+  "outcome": "abandoned",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0291",
+  "source": "synthetic",
+  "started_at": "2026-11-19T05:54:15Z",
+  "ended_at": "2026-11-19T06:04:17Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0292",
+  "source": "synthetic",
+  "started_at": "2026-11-19T10:01:48Z",
+  "ended_at": "2026-11-19T10:09:07Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0293",
+  "source": "synthetic",
+  "started_at": "2026-11-19T10:15:50Z",
+  "ended_at": "2026-11-19T10:18:58Z",
+  "outcome": "not_eligible",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0294",
+  "source": "synthetic",
+  "started_at": "2026-11-19T10:27:08Z",
+  "ended_at": "2026-11-19T10:32:09Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0295",
+  "source": "synthetic",
+  "started_at": "2026-11-19T11:20:29Z",
+  "ended_at": "2026-11-19T11:25:23Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "large",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0296",
+  "source": "synthetic",
+  "started_at": "2026-11-19T11:24:25Z",
+  "ended_at": "2026-11-19T11:29:13Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "ms"
+  }
+ },
+ {
+  "_id": "syn0297",
+  "source": "synthetic",
+  "started_at": "2026-11-19T11:59:12Z",
+  "ended_at": "2026-11-19T12:04:10Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0298",
+  "source": "synthetic",
+  "started_at": "2026-11-19T13:20:13Z",
+  "ended_at": "2026-11-19T13:29:53Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ },
+ {
+  "_id": "syn0299",
+  "source": "synthetic",
+  "started_at": "2026-11-19T14:05:46Z",
+  "ended_at": "2026-11-19T14:14:16Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  },
+  "current_preferences": {
+   "wording": "simple",
+   "text_size": "default",
+   "language": "en"
+  }
+ },
+ {
+  "_id": "syn0300",
+  "source": "synthetic",
+  "started_at": "2026-11-19T14:28:07Z",
+  "ended_at": "2026-11-19T14:32:54Z",
+  "outcome": "submitted",
+  "preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  },
+  "current_preferences": {
+   "wording": "standard",
+   "text_size": "default",
+   "language": "zh"
+  }
+ }
+]

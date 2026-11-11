@@ -1,0 +1,136 @@
+
+{
+  "step_id": "account.step4",
+  "title": "Verify it's you",
+  "screens": [
+    {
+      "screen_id": "national_id_photo",
+      "description": "Part 1 of 2. The customer takes a photo of their national ID card."
+    },
+    {
+      "screen_id": "selfie_face_check",
+      "description": "Part 2 of 2. The customer takes a selfie with their face positioned inside the oval."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "identity_verification_overview",
+      "screen_id": "national_id_photo",
+      "field_id": null,
+      "topic": "Identity Verification",
+      "content": "Step 4 is called Verify it's you. It contains two parts: taking a photo of the national ID card and completing a selfie face check."
+    },
+    {
+      "id": "national_id_purpose",
+      "screen_id": "national_id_photo",
+      "field_id": "national_id",
+      "topic": "Why Take a National ID Photo?",
+      "content": "The application asks the customer to take a photo of their national ID card to capture its details as part of identity verification."
+    },
+    {
+      "id": "national_id_position",
+      "screen_id": "national_id_photo",
+      "field_id": "id_camera_frame",
+      "topic": "Positioning the National ID Card",
+      "content": "Place your national ID card completely inside the camera frame before taking the photo."
+    },
+    {
+      "id": "national_id_lighting",
+      "screen_id": "national_id_photo",
+      "field_id": "lighting",
+      "topic": "Lighting for ID Photo",
+      "content": "The screen instructs the customer to use good lighting and avoid glare when photographing their national ID card."
+    },
+    {
+      "id": "flat_surface",
+      "screen_id": "national_id_photo",
+      "field_id": "photo_tips",
+      "topic": "Use a Flat Surface",
+      "content": "Lay the national ID card completely flat before taking its photo. This is one of the instant verification tips displayed on the screen."
+    },
+    {
+      "id": "clean_camera_lens",
+      "screen_id": "national_id_photo",
+      "field_id": "photo_tips",
+      "topic": "Clean Camera Lens",
+      "content": "The prototype recommends wiping off camera smudges before photographing the national ID card."
+    },
+    {
+      "id": "auto_detect",
+      "screen_id": "national_id_photo",
+      "field_id": "auto_detect",
+      "topic": "Auto-detect Ready",
+      "content": "The camera screen displays an Auto-detect ready indicator. This indicates that the prototype is ready to detect the national ID card within the camera frame."
+    },
+    {
+      "id": "take_id_photo",
+      "screen_id": "national_id_photo",
+      "field_id": "take_photo",
+      "topic": "Take Photo Button",
+      "content": "The Take photo button is used to capture an image of the national ID card."
+    },
+    {
+      "id": "nfc_id_option",
+      "screen_id": "national_id_photo",
+      "field_id": "use_nfc",
+      "topic": "NFC-enabled National ID",
+      "content": "The prototype displays an optional Use NFC feature for an NFC-enabled ID card, described as a faster setup option. Whether this feature is available depends on the implementation and supported ID cards."
+    },
+    {
+      "id": "selfie_overview",
+      "screen_id": "selfie_face_check",
+      "field_id": null,
+      "topic": "Selfie Face Check",
+      "content": "Part 2 of identity verification asks the customer to look at the camera and keep their face inside the oval before taking a selfie."
+    },
+    {
+      "id": "selfie_position",
+      "screen_id": "selfie_face_check",
+      "field_id": "face_oval",
+      "topic": "Position Face Inside Oval",
+      "content": "Position your face inside the oval shown on the screen. The oval acts as a visual guide for selfie positioning."
+    },
+    {
+      "id": "selfie_lighting",
+      "screen_id": "selfie_face_check",
+      "field_id": "lighting_status",
+      "topic": "Good Lighting Detected",
+      "content": "The selfie screen displays a Good lighting detected indicator. The customer should keep their face clearly visible within the camera area."
+    },
+    {
+      "id": "selfie_ready",
+      "screen_id": "selfie_face_check",
+      "field_id": "camera_status",
+      "topic": "Selfie Camera Ready",
+      "content": "The selfie screen displays a Ready status, indicating that the prototype is prepared for the customer to take a selfie."
+    },
+    {
+      "id": "take_selfie",
+      "screen_id": "selfie_face_check",
+      "field_id": "take_selfie",
+      "topic": "Take Selfie Button",
+      "content": "The Take selfie button captures the customer's selfie as part of the identity verification process."
+    },
+    {
+      "id": "id_photo_troubleshooting",
+      "screen_id": "national_id_photo",
+      "field_id": null,
+      "topic": "National ID Photo Problems",
+      "content": "If the national ID card is difficult to capture, check that it is completely inside the frame, lying flat, and photographed with good lighting without glare. The customer can also clean the camera lens."
+    },
+    {
+      "id": "selfie_troubleshooting",
+      "screen_id": "selfie_face_check",
+      "field_id": null,
+      "topic": "Selfie Positioning Problems",
+      "content": "If the customer is having difficulty positioning their face, they should look at the camera and place their face inside the oval. If the problem continues, they can request assistance through Ask Sense."
+    },
+    {
+      "id": "identity_verification_not_approval",
+      "screen_id": "selfie_face_check",
+      "field_id": null,
+      "topic": "Identity Verification and Account Approval",
+      "content": "Completing the identity verification screens does not mean the bank account has been approved. The customer must continue through the remaining application steps."
+    }
+  ]
+}

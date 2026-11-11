@@ -1,0 +1,107 @@
+{
+  "step_id": "account.step5",
+  "title": "Supporting documents",
+  "screens": [
+    {
+      "screen_id": "choose_document",
+      "description": "The customer chooses one document type from the list of accepted supporting documents."
+    },
+    {
+      "screen_id": "upload_document",
+      "description": "The customer uploads the chosen document and sees whether it was accepted."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "documents_overview",
+      "screen_id": "choose_document",
+      "field_id": null,
+      "topic": "Supporting Documents",
+      "content": "Step 5 asks the customer to provide one supporting document from the list of accepted documents. The document helps the bank verify the customer's details."
+    },
+    {
+      "id": "accepted_documents",
+      "screen_id": "choose_document",
+      "field_id": null,
+      "topic": "Accepted Documents",
+      "content": "The accepted supporting documents are: a Singapore employment offer letter, a Singapore school admission letter, an ICA In-Principle Approval letter, a utilities or telecom bill, rental agreement or proof of property purchase, or a valid Singapore government-issued pass. Only one document is needed."
+    },
+    {
+      "id": "choose_one_document",
+      "screen_id": "choose_document",
+      "field_id": "document_type",
+      "topic": "Choosing a Document",
+      "content": "The customer chooses the document type they have from the accepted list, then chooses the file to upload. They can change the document type before uploading."
+    },
+    {
+      "id": "document_date",
+      "screen_id": "choose_document",
+      "field_id": null,
+      "topic": "How Recent the Document Must Be",
+      "content": "The supporting document must be dated within the last 3 months."
+    },
+    {
+      "id": "document_timeframe",
+      "screen_id": "choose_document",
+      "field_id": null,
+      "topic": "Time Allowed",
+      "content": "In the real account opening process, OCBC asks for the supporting document by email after the application is submitted, and the customer replies within 7 days. This prototype lets the customer add the document during step 5 instead."
+    },
+    {
+      "id": "document_email_subject",
+      "screen_id": "choose_document",
+      "field_id": null,
+      "topic": "Sending the Document by Email",
+      "content": "When OCBC asks for the supporting document by email, the customer replies with one document dated within the last 3 months and puts their passport number in the email subject. The customer must not share their passport number with the AI assistant."
+    },
+    {
+      "id": "upload_document",
+      "screen_id": "upload_document",
+      "field_id": "document_file",
+      "topic": "Uploading the Document",
+      "content": "After choosing the document type, the customer selects the file and uploads it. The screen shows when the document has been added. The customer can replace the file before continuing."
+    },
+    {
+      "id": "doc_unreadable",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "File Not Clear",
+      "content": "If the file is reported as not clear (DOC_UNREADABLE), the customer should upload a clearer copy: use good light, keep all four corners of the document in view, and make sure the text is readable."
+    },
+    {
+      "id": "doc_wrong_type",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "Document Not Accepted",
+      "content": "If the document is reported as not accepted (DOC_WRONG_TYPE), it is not on the accepted list. The customer should check the accepted documents and choose a different one."
+    },
+    {
+      "id": "doc_missing",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "Document Missing",
+      "content": "If the application reports that a document is missing (DOC_MISSING), the customer needs to choose a document type and upload a file before continuing."
+    },
+    {
+      "id": "prototype_simulated",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "Prototype Upload",
+      "content": "In this prototype the upload is simulated. No real document is collected or stored."
+    },
+    {
+      "id": "documents_not_approval",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "Document Accepted Is Not Approval",
+      "content": "A document being accepted at this step does not mean the account has been approved. After OCBC receives the supporting documents, it may take up to 21 working days to tell the customer whether the account has been opened."
+    },
+    {
+      "id": "documents_human_help",
+      "screen_id": "upload_document",
+      "field_id": null,
+      "topic": "Getting Help",
+      "content": "If the customer is unsure which document to use, or the upload keeps failing, they can ask Sense or request help from a staff member."
+    }
+  ]
+}

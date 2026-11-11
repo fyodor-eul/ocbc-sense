@@ -1,0 +1,28 @@
+.lang-pill {
+  display: inline-flex;
+  padding: 2px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.lang-pill__opt {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.lang-pill__opt--on {
+  color: var(--red);
+  font-weight: 700;
+  border-color: var(--red);
+  background: var(--card);
+}
